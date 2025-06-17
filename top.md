@@ -37,27 +37,25 @@
 }
 .top-wrap {
   max-width: 600px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto 48px auto;
   background: #fcfcfd;
   border-radius: 18px;
   box-shadow: 0 2px 12px #0001;
   padding: 32px 28px 28px 28px;
   font-size: 1.13em;
-  position: relative;
 }
 .top-title {
   font-size: 1.5em;
   font-weight: 700;
   color: #145ba0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   text-align: center;
 }
 .top-update {
   color: #888;
   font-size: 0.97em;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
   text-align: left;
-  margin-left: 2px;
 }
 .top-table {
   width: 100%;
@@ -70,6 +68,7 @@
   font-weight: 700;
   font-size: 1em;
   padding: 8px 0;
+  border-radius: 6px 6px 0 0;
 }
 .top-table th,
 .top-table td {
@@ -84,8 +83,6 @@
 }
 .top-table tr:not(:nth-child(2)) td {
   background: #f8fafc;
-  color: #222;
-  font-weight: 400;
 }
 .top-table td {
   font-size: 1.05em;
@@ -94,8 +91,6 @@
   margin-top: 14px;
   font-size: 1.02em;
   color: #7a7a7a;
-  text-align: left;
-  margin-left: 2px;
 }
 @media (max-width: 800px) {
   .menu-nav,
@@ -106,14 +101,13 @@
 }
 </style>
 
-<!-- Меню -->
+<!-- Меню (как на главной!) -->
 <div class="menu-nav">
   <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
   <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
   <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
   <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
   <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
-  <a href="/Beer-Syndicate/top" class="menu-btn active">Топ-5 недели</a>
 </div>
 
 <div class="top-wrap">
@@ -127,7 +121,7 @@
     </tr>
     <tr>
       <td>1</td>
-      <td>Санядробовик</td>
+      <td>СаняДробовик</td>
       <td>160</td>
     </tr>
     <tr>
