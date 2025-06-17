@@ -7,6 +7,7 @@
   padding: 18px 0 16px 0; 
   border-radius: 0 0 14px 14px; 
   box-shadow: 0 2px 8px #0001;
+  margin-bottom: 40px;
 }
 .menu-btn {
   background: #fff;
@@ -31,39 +32,65 @@
   border-color: #7dbdff;
   color: #145ba0;
 }
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-card {
+  background: #f9f9f9;
+  border-left: 5px solid #ffda73;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 18px 20px;
+}
+.news-card.blue {
+  border-left: 5px solid #7dbdff;
+}
+.news-title {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #145ba0;
+}
 </style>
 
+<!-- Меню -->
 <div class="menu-nav">
   <a href="index.md" class="menu-btn active">Главная</a>
   <a href="about.md" class="menu-btn">О гильдии</a>
   <a href="members.md" class="menu-btn">Состав</a>
   <a href="recruit.md" class="menu-btn">Как вступить</a>
   <a href="contacts.md" class="menu-btn">Контакты</a>
+</div>
+
+# Beer-Syndicate
+
+Добро пожаловать на сайт гильдии ArcheAge!
 
 ---
 
 ## 📰 Новости гильдии
 
-<div style="display: flex; flex-direction: column; gap: 24px; margin-top: 24px;">
+<div class="news-list">
 
-<!-- Новость 1 -->
-<div style="background: #f9f9f9; border-left: 5px solid #ffda73; border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 18px 20px;">
-  <div style="font-weight: 700; font-size: 1.1em; color: #145ba0;">16 июня 2025 — Открытие сайта гильдии!</div>
-  <div style="margin-top: 4px;">
-    Запущен официальный сайт нашей гильдии. Здесь будут публиковаться все актуальные новости, анонсы и события.
+  <!-- Новость 1 -->
+  <div class="news-card">
+    <div class="news-title">16 июня 2025 — Открытие сайта гильдии!</div>
+    <div style="margin-top: 4px;">
+      Запущен официальный сайт нашей гильдии. Здесь будут публиковаться все актуальные новости, анонсы и события.
+    </div>
   </div>
-</div>
 
-<!-- Новость 2 -->
-<div style="background: #f9f9f9; border-left: 5px solid #7dbdff; border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 18px 20px;">
-  <div style="font-weight: 700; font-size: 1.1em; color: #145ba0;">15 июня 2025 — Приём новых участников</div>
-  <div style="margin-top: 4px;">
-    Мы начинаем набор активных игроков. Подробнее — в разделе “Как вступить”.
+  <!-- Новость 2 -->
+  <div class="news-card blue">
+    <div class="news-title">15 июня 2025 — Приём новых участников</div>
+    <div style="margin-top: 4px;">
+      Мы начинаем набор активных игроков. Подробнее — в разделе “Как вступить”.
+    </div>
   </div>
-</div>
-
-<!-- Здесь можно легко добавить новую новость, просто скопируйте блок выше -->
-
-</div>
 
 </div>
