@@ -99,70 +99,6 @@
   }
   .top-title { font-size: 1.13em; }
 }
-</style>
-
-<!-- Меню (как на главной!) -->
-<div class="menu-nav">
-  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
-  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
-  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
-  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
-  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
-</div>
-
-<div class="top-wrap">
-  <div class="top-title">Топ-5 по вкладу за неделю</div>
-  <div class="top-update">Последнее обновление: 17.06.25 6:00</div>
-  <table class="top-table">
-    <tr>
-      <th>Место</th>
-      <th>Имя</th>
-      <th>Вклад (неделя)</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>СаняДробовик</td>
-      <td>160</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Ksioniks</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Thxfordrugs</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Солевичек</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Лолечка</td>
-      <td>30</td>
-    </tr>
-  </table>
-  <div class="top-winners">
-    Победители 1 недели: ----------
-  </div>
-</div>
-<footer class="footer-main">
-  <div class="footer-content">
-    <span>© 2025 Beer-Syndicate</span>
-    <span class="footer-links">
-      <a href="/Beer-Syndicate/contacts">Контакты</a>
-      <span>|</span>
-      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
-      <span>|</span>
-      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
-    </span>
-  </div>
-</footer>
-
-<style>
 .footer-main {
   width: 100%;
   margin-top: 36px;
@@ -203,3 +139,114 @@
   .footer-content { flex-direction: column; gap: 8px; }
 }
 </style>
+
+<!-- Меню -->
+<div class="menu-nav">
+  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+</div>
+
+<!-- Блок топа -->
+<div class="top-wrap">
+  <div class="top-title">Топ-5 по вкладу за неделю</div>
+  <div class="top-update">Последнее обновление: 17.06.25 6:00</div>
+  <table class="top-table">
+    <tr>
+      <th>Место</th>
+      <th>Имя</th>
+      <th>Вклад (неделя)</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>СаняДробовик</td>
+      <td>160</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ksioniks</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Thxfordrugs</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Солевичек</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Лолечка</td>
+      <td>30</td>
+    </tr>
+  </table>
+  <div class="top-winners">
+    Победители прошлой недели: ----------
+  </div>
+</div>
+
+<!-- Футер -->
+<footer class="footer-main">
+  <div class="footer-content">
+    <span>© 2025 Beer-Syndicate</span>
+    <span class="footer-links">
+      <a href="/Beer-Syndicate/contacts">Контакты</a>
+      <span>|</span>
+      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+      <span>|</span>
+      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+    </span>
+  </div>
+</footer>
+
+<!-- Скрипт таймера -->
+<script>
+  function updateTimer() {
+    const now = new Date();
+    const updateDate = document.querySelector('.top-update');
+    
+    // Автоматическое обновление даты
+    const formattedDate = now.toLocaleString('ru-RU', {
+      day: '2-digit',
+      month: '2-digit',
+      year: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    }).replace(/,/, '');
+    
+    updateDate.textContent = `Последнее обновление: ${formattedDate}`;
+
+    // Вычисляем время до следующей субботы 23:59
+    const nextSaturday = new Date();
+    const daysUntilSaturday = (6 - now.getDay() + 7) % 7; // 6 = суббота
+    nextSaturday.setDate(now.getDate() + daysUntilSaturday);
+    nextSaturday.setHours(23, 59, 0, 0);
+
+    // Если сегодня суббота и время ещё не 23:59
+    if (now.getDay() === 6 && now.getHours() < 23) {
+      nextSaturday.setDate(now.getDate());
+    }
+
+    const diff = nextSaturday - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    // Обновляем таймер
+    const timerElement = document.querySelector('.top-winners');
+    if (diff > 0) {
+      timerElement.innerHTML = `До сброса топа: <b>${days}д ${hours}ч ${minutes}м</b> | Победители прошлой недели: ----------`;
+    } else {
+      timerElement.innerHTML = `Топ сброшен! Обновите данные. | Победители прошлой недели: ----------`;
+    }
+  }
+
+  // Запускаем таймер сразу и обновляем каждую минуту
+  updateTimer();
+  setInterval(updateTimer, 60000);
+</script>
