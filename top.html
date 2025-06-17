@@ -1,255 +1,314 @@
-<style>
-/* Стили меню */
-.menu-nav {
-  display: flex; 
-  justify-content: center; 
-  gap: 18px; 
-  background: #f7f7f7; 
-  padding: 18px 0 16px 0; 
-  border-radius: 0 0 14px 14px; 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.menu-btn {
-  background: #fff;
-  color: #2d2d2d;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 10px 26px;
-  text-decoration: none;
-  transition: all 0.18s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border: 1px solid #ececec;
-}
-.menu-btn:hover {
-  background: #ffda73;
-  border-color: #f3c143;
-}
-
-/* Блок топа */
-.top-wrap {
-  max-width: 600px;
-  margin: 0 auto 48px auto;
-  background: #fcfcfd;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  padding: 32px 28px 28px 28px;
-  font-size: 1.13em;
-}
-.top-title {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #145ba0;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.top-update {
-  color: #888;
-  font-size: 0.97em;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-/* таблица */
-.top-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 auto 18px auto;
-  table-layout: fixed;
-}
-.top-table colgroup col:nth-child(1) { width: 25%; }
-.top-table colgroup col:nth-child(2) { width: 50%; }
-.top-table colgroup col:nth-child(3) { width: 25%; }
-.top-table th {
-  background: #eaf4ff;
-  color: #2979ff;
-  font-weight: 700;
-  padding: 12px 15px;
-  text-align: center;
-  border: 1px solid #e4e8ee;
-}
-.top-table td {
-  padding: 12px 15px;
-  text-align: center;
-  border: 1px solid #e4e8ee;
-  background: #f8fafc;
-}
-.top-table tr:nth-child(2) td {
-  background: #fff9e2;
-  color: #bd890b;
-  font-weight: 700;
-}
-
-/* Таймер и победители */
-.timer-block {
-  margin: 14px 0;
-  font-size: 1.02em;
-  color: #7a7a7a;
-  text-align: center;
-}
-.timer {
-  font-weight: bold;
-  color: #145ba0;
-}
-.winners-block {
-  margin-top: 8px;
-  font-size: 1.02em;
-  color: #7a7a7a;
-  text-align: center;
-}
-
-/* Футер */
-.footer-main {
-  width: 100%;
-  margin-top: 36px;
-  background: #f7f7f7;
-  border-radius: 18px 18px 0 0;
-  box-shadow: 0 -1px 6px rgba(0,0,0,0.1);
-  padding: 18px 0 14px 0;
-  font-size: 1.04em;
-  color: #789;
-  display: flex;
-  justify-content: center;
-}
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 96%;
-}
-.footer-links a {
-  color: #145ba0;
-  text-decoration: none;
-  margin: 0 4px;
-  font-weight: 600;
-}
-.footer-links a:hover {
-  color: #e3b108;
-  text-decoration: underline;
-}
-.footer-links span {
-  margin: 0 3px;
-  color: #aaa;
-}
-
-/* Адаптивность */
-@media (max-width: 800px) {
-  .menu-nav, .top-wrap {
-    max-width: 95%;
-  }
-  .top-table th, 
-  .top-table td {
-    padding: 8px 10px;
-    font-size: 0.9em;
-  }
-}
-</style>
-
-<!-- Меню -->
-<div class="menu-nav">
-  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
-  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
-  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
-  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
-  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
-</div>
-
-<!-- Блок топа -->
-<div class="top-wrap">
-  <div class="top-title">Топ-5 по вкладу за неделю</div>
-  <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
-  
-  <table class="top-table">
-    <colgroup>
-      <col>
-      <col>
-      <col>
-    </colgroup>
-    <tr>
-      <th>Место</th>
-      <th>Имя</th>
-      <th>Вклад (неделя)</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>СаняДробовик</td>
-      <td>160</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Thxfordrugs</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Ksioniks</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Солевичек</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Лоленка</td>
-      <td>30</td>
-    </tr>
-  </table>
-  
-  <div class="timer-block">
-    До сброса топа: <span class="timer">4д 11ч 6м 33с</span>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Топ недели | Пивной Синдикат</title>
+  <style>
+    :root {
+      --beer-bg: #2b2116;
+      --beer-panel: #3b2e22;
+      --beer-panel-light: #53422d;
+      --beer-cream: #fff8e1;
+      --beer-cream2: #ffe3a3;
+      --beer-yellow: #FFDE69;
+      --beer-yellow2: #FFC34A;
+      --beer-orange: #FFA941;
+      --beer-brown: #A87536;
+      --beer-brown-dark: #6e4923;
+      --beer-border: #6e4923;
+      --beer-shadow: #0008;
+    }
+    body {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: var(--beer-bg);
+      margin: 0;
+      padding: 0;
+      color: var(--beer-cream);
+      min-height: 100vh;
+    }
+    .main-wrapper {
+      max-width: 980px;
+      margin: 38px auto 0 auto;
+      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 36px #000b, 0 1.5px 6px #ffde6930;
+      padding: 32px 28px 22px 28px;
+      border: 1.5px solid var(--beer-border);
+      position: relative;
+    }
+    .menu-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      background: var(--beer-panel);
+      border-radius: 18px;
+      box-shadow: 0 3px 16px #000a, 0 1.5px 4px #ffde6930;
+      padding: 14px 0;
+      margin-bottom: 32px;
+      border: 2px solid var(--beer-brown);
+    }
+    .menu-btn {
+      background: var(--beer-cream2);
+      color: var(--beer-panel);
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 26px;
+      text-decoration: none;
+      font-size: 1.08em;
+      transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
+      box-shadow: 0 1.5px 7px #ffc34a1c;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      top: 0;
+    }
+    .menu-btn:hover, .menu-btn:focus {
+      background: var(--beer-yellow);
+      color: var(--beer-panel);
+      border-color: var(--beer-orange);
+      box-shadow: 0 2.5px 18px #ffde6933;
+      transform: translateY(-2px) scale(1.04);
+      z-index: 2;
+    }
+    .menu-btn.active {
+      background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
+      border-color: var(--beer-orange);
+      color: var(--beer-panel);
+      box-shadow: 0 2.5px 13px #ffde694a;
+    }
+    /* Блок топа */
+    .top-wrap {
+      max-width: 600px;
+      margin: 0 auto 48px auto;
+      background: var(--beer-panel-light);
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #0007;
+      padding: 32px 28px 28px 28px;
+      font-size: 1.15em;
+      color: var(--beer-cream);
+      border: 2px solid var(--beer-border);
+    }
+    .top-title {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--beer-yellow2);
+      margin-bottom: 8px;
+      text-align: center;
+      text-shadow: 0 2px 8px #ffde6940;
+    }
+    .top-update {
+      color: #e3c57a;
+      font-size: 1em;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    /* таблица */
+    .top-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto 18px auto;
+      table-layout: fixed;
+      background: var(--beer-panel);
+      border-radius: 13px;
+      overflow: hidden;
+      box-shadow: 0 1px 8px #0004;
+    }
+    .top-table colgroup col:nth-child(1) { width: 25%; }
+    .top-table colgroup col:nth-child(2) { width: 50%; }
+    .top-table colgroup col:nth-child(3) { width: 25%; }
+    .top-table th {
+      background: var(--beer-yellow);
+      color: var(--beer-panel);
+      font-weight: 700;
+      padding: 12px 15px;
+      text-align: center;
+      border: none;
+      font-size: 1.13em;
+    }
+    .top-table td {
+      padding: 12px 15px;
+      text-align: center;
+      border: none;
+      background: var(--beer-cream2);
+      color: var(--beer-panel);
+      font-weight: 600;
+      font-size: 1.09em;
+    }
+    .top-table tr:nth-child(2) td {
+      background: var(--beer-yellow2);
+      color: #ad8809;
+      font-weight: 700;
+      font-size: 1.15em;
+    }
+    /* Таймер и победители */
+    .timer-block {
+      margin: 14px 0;
+      font-size: 1.02em;
+      color: #e3c57a;
+      text-align: center;
+    }
+    .timer {
+      font-weight: bold;
+      color: var(--beer-yellow);
+      font-size: 1.08em;
+      letter-spacing: 0.03em;
+    }
+    .winners-block {
+      margin-top: 8px;
+      font-size: 1.02em;
+      color: #e3c57a;
+      text-align: center;
+    }
+    /* Футер */
+    .footer-main {
+      width: 100%;
+      margin-top: 36px;
+      background: linear-gradient(90deg, #38280f 40%, #523813 100%);
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 -1px 13px #000a;
+      padding: 28px 0 20px 0;
+      font-size: 1.13em;
+      color: var(--beer-yellow2);
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+      border-top: 4px solid var(--beer-yellow2);
+      letter-spacing: 0.01em;
+    }
+    .footer-content {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 96%;
+    }
+    .footer-links a {
+      color: var(--beer-yellow);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 700;
+      transition: color 0.13s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .footer-links a:hover {
+      color: var(--beer-orange);
+      border-bottom: 2px solid var(--beer-orange);
+    }
+    .footer-links span {
+      margin: 0 4px;
+      color: var(--beer-brown-dark);
+    }
+    @media (max-width: 800px) {
+      .menu-nav, .top-wrap { max-width: 97vw; }
+      .top-table th, .top-table td { padding: 8px 10px; font-size: 0.96em; }
+    }
+    @media (max-width: 700px) {
+      .footer-content { flex-direction: column; gap: 10px; }
+      .main-wrapper { padding: 0 2vw; }
+      .top-title { font-size: 1.15em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <!-- Меню -->
+    <nav class="menu-nav">
+      <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+      <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+      <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+      <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+      <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+    </nav>
+    <!-- Блок топа -->
+    <div class="top-wrap">
+      <div class="top-title">Топ-5 по вкладу за неделю</div>
+      <div class="top-update">Последнее обновление: 18.06.25 1:00</div>
+      <table class="top-table">
+        <colgroup>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <tr>
+          <th>Место</th>
+          <th>Имя</th>
+          <th>Вклад (неделя)</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Нолемоций</td>
+          <td>605</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>СаняДробовик</td>
+          <td>180</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Thxfordrugs</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ksioniks</td>
+          <td>91</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Пив</td>
+          <td>60</td>
+        </tr>
+      </table>
+      <div class="timer-block">
+        До сброса топа: <span class="timer">Загрузка...</span>
+      </div>
+      <div class="winners-block">
+        Победители прошлой недели: ---
+      </div>
+    </div>
   </div>
-  <div class="winners-block">
-    Победители прошлой недели: ---
-  </div>
-</div>
-
-<!-- Футер -->
-<footer class="footer-main">
-  <div class="footer-content">
-    <span>© 2025 Beer-Syndicate</span>
-    <span class="footer-links">
-      <a href="/Beer-Syndicate/contacts">Контакты</a>
-      <span>|</span>
-      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
-      <span>|</span>
-      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
-    </span>
-  </div>
-</footer>
-
-<!-- Таймер -->
-<script>
-function updateTimer() {
-  const now = new Date();
-  const nextSaturday = new Date();
-  
-  // Устанавливаем следующую субботу 23:59
-  nextSaturday.setDate(now.getDate() + (6 - now.getDay() + 7) % 7);
-  nextSaturday.setHours(23, 59, 0, 0);
-  
-  // Если сегодня суббота и время до 23:59
-  if (now.getDay() === 6 && now.getHours() < 23) {
-    nextSaturday.setDate(now.getDate());
+  <!-- Футер -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <span>© 2025 Beer-Syndicate</span>
+      <span class="footer-links">
+        <a href="/Beer-Syndicate/contacts">Контакты</a>
+        <span>|</span>
+        <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+        <span>|</span>
+        <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+      </span>
+    </div>
+  </footer>
+  <!-- Таймер -->
+  <script>
+  function updateTimer() {
+    const now = new Date();
+    const nextSaturday = new Date();
+    // Вычисляем следующую субботу 23:59
+    nextSaturday.setDate(now.getDate() + ((6 - now.getDay() + 7) % 7));
+    nextSaturday.setHours(23, 59, 0, 0);
+    // Если сегодня суббота и до 23:59
+    if (now.getDay() === 6 && now.getHours() < 23) {
+      nextSaturday.setDate(now.getDate());
+    }
+    const diff = nextSaturday - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    document.querySelector('.timer').textContent =
+      `${days}д ${hours}ч ${minutes}м ${seconds}с`;
   }
-
-  const diff = nextSaturday - now;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-  document.querySelector('.timer').textContent = 
-    `${days}д ${hours}ч ${minutes}м ${seconds}с`;
-}
-
-updateTimer();
-setInterval(updateTimer, 1000);
-</script>
+  updateTimer();
+  setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
