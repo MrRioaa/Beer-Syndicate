@@ -35,7 +35,6 @@
   border-color: #7dbdff;
   color: #145ba0;
 }
-
 .recruit-main {
   display: flex;
   align-items: flex-start;
@@ -75,6 +74,8 @@
   color: #e3b108;
   text-decoration: underline;
 }
+
+/* Баннер справа */
 .banner-side {
   min-width: 225px;
   max-width: 240px;
@@ -91,7 +92,7 @@
 .banner-title {
   color: #b48b0a;
   font-weight: 700;
-  font-size: 1.11em;
+  font-size: 1.12em;
   margin-bottom: 6px;
 }
 .banner-txt {
@@ -141,12 +142,67 @@
     <div style="margin-top:1.2em; color:#888;">После подтверждения заявки вам объяснят все нюансы и добавят в гильдию.</div>
   </div>
   <div class="banner-side">
-    <div class="banner-title">🍺 Хочешь вступить?</div>
+    <div class="banner-title">🏆 Топ-5 недели</div>
     <div class="banner-txt">
-      Вступай в наш чат или Discord — и стань частью уютной компании! <br> Пиши лидеру, если есть вопросы.
+      Еженедельный рейтинг вклада участников.<br>
+      Смотри топ — участвуй, чтобы попасть в призовую пятёрку!
     </div>
-    <a href="https://t.me/+igz_gbmt_OE5YTVi" class="banner-btn" target="_blank">
-      Вступить в Telegram-чат →
+    <a href="/Beer-Syndicate/top" class="banner-btn">
+      Смотреть топ-5 недели →
     </a>
   </div>
 </div>
+<footer class="footer-main">
+  <div class="footer-content">
+    <span>© 2025 Beer-Syndicate</span>
+    <span class="footer-links">
+      <a href="/Beer-Syndicate/contacts">Контакты</a>
+      <span>|</span>
+      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+      <span>|</span>
+      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+    </span>
+  </div>
+</footer>
+
+<style>
+.footer-main {
+  width: 100%;
+  margin-top: 36px;
+  background: #f7f7f7;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -1px 6px #0001;
+  padding: 18px 0 14px 0;
+  font-size: 1.04em;
+  color: #789;
+  display: flex;
+  justify-content: center;
+}
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+}
+.footer-links a {
+  color: #145ba0;
+  text-decoration: none;
+  margin: 0 4px;
+  font-weight: 600;
+  transition: color 0.13s;
+}
+.footer-links a:hover {
+  color: #e3b108;
+  text-decoration: underline;
+}
+.footer-links span {
+  margin: 0 3px;
+  color: #aaa;
+}
+@media (max-width: 700px) {
+  .footer-content { flex-direction: column; gap: 8px; }
+}
+</style>
