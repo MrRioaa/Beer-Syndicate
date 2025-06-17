@@ -1,171 +1,144 @@
 <style>
-.menu-nav {
-  display: flex; 
-  justify-content: center; 
-  gap: 18px; 
-  background: #f7f7f7; 
-  padding: 18px 0 16px 0; 
-  border-radius: 0 0 14px 14px; 
-  box-shadow: 0 2px 8px #0001;
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
 }
-.menu-btn {
-  background: #fff;
-  color: #2d2d2d;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 10px 26px;
-  text-decoration: none;
-  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
-  box-shadow: 0 2px 6px #0002;
-  border: 1px solid #ececec;
-  display: inline-block;
-}
-.menu-btn:hover, .menu-btn:focus {
-  background: #ffda73;
-  border-color: #f3c143;
-  color: #222;
-  outline: none;
-}
-.menu-btn.active {
-  background: #e3f1ff;
-  border-color: #7dbdff;
-  color: #145ba0;
-}
-.top-wrap {
-  max-width: 600px;
-  margin: 0 auto 48px auto;
-  background: #fcfcfd;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px #0001;
-  padding: 32px 28px 28px 28px;
-  font-size: 1.13em;
-}
-.top-title {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #145ba0;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.top-update {
-  color: #888;
-  font-size: 0.97em;
-  margin-bottom: 18px;
-  text-align: center; /* Центрируем дату обновления */
-}
-.top-table {
+
+/* Навигационное меню */
+.nav-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto 18px auto; /* Центрируем таблицу */
-  max-width: 90%; /* Добавляем отступы по бокам */
+  margin-bottom: 30px;
 }
-.top-table th {
+.nav-table td {
+  text-align: center;
+  padding: 12px 5px;
+  border-bottom: 2px solid #f0f0f0;
+}
+.nav-link {
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #e3b108;
+}
+
+/* Блок топа */
+.top-section {
+  background: #fcfcfd;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.section-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #145ba0;
+}
+.update-time {
+  text-align: center;
+  color: #888;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+/* Таблица топа */
+.leaderboard-table {
+  width: 100%;
+  max-width: 500px; /* Фиксированная ширина для выравнивания */
+  margin: 0 auto; /* Центрирование */
+  border-collapse: collapse;
+}
+.leaderboard-table th {
   background: #eaf4ff;
   color: #2979ff;
-  font-weight: 700;
-  font-size: 1em;
-  padding: 8px 12px; /* Добавляем отступы для заголовков */
-  border-radius: 6px 6px 0 0;
-}
-.top-table th,
-.top-table td {
+  padding: 10px 15px;
   text-align: center;
-  border: 1px solid #e4e8ee;
-  padding: 8px 12px;
+  font-weight: 700;
 }
-.top-table tr:nth-child(2) td {
+.leaderboard-table td {
+  padding: 10px 15px;
+  text-align: center;
+  border-bottom: 1px solid #e4e8ee;
+}
+.leaderboard-table tr:nth-child(2) td {
   background: #fff9e2;
   color: #bd890b;
   font-weight: 700;
 }
-.top-table tr:not(:nth-child(2)) td {
+.leaderboard-table tr:not(:nth-child(2)) td {
   background: #f8fafc;
 }
-.timer-block {
-  margin: 14px 0;
-  font-size: 1.02em;
-  color: #7a7a7a;
-  text-align: center;
-}
+
+/* Таймер и победители */
 .timer {
-  font-weight: bold;
-  color: #145ba0;
-}
-.winners-block {
-  margin-top: 8px;
-  font-size: 1.02em;
-  color: #7a7a7a;
   text-align: center;
+  margin: 20px 0 10px;
+  font-size: 1.05em;
 }
-@media (max-width: 800px) {
-  .menu-nav,
-  .top-wrap {
-    max-width: 97vw;
-  }
-  .top-title { font-size: 1.13em; }
-  .top-table {
-    max-width: 95%; /* Увеличиваем на мобильных */
-  }
+.winners {
+  text-align: center;
+  color: #7a7a7a;
+  margin-bottom: 15px;
 }
-.footer-main {
-  width: 100%;
-  margin-top: 36px;
-  background: #f7f7f7;
-  border-radius: 18px 18px 0 0;
-  box-shadow: 0 -1px 6px #0001;
-  padding: 18px 0 14px 0;
-  font-size: 1.04em;
+
+/* Футер */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
   color: #789;
-  display: flex;
-  justify-content: center;
 }
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 96%;
+.footer-links {
+  margin-top: 8px;
 }
 .footer-links a {
   color: #145ba0;
   text-decoration: none;
-  margin: 0 4px;
-  font-weight: 600;
-  transition: color 0.13s;
+  margin: 0 8px;
 }
 .footer-links a:hover {
-  color: #e3b108;
   text-decoration: underline;
 }
-.footer-links span {
-  margin: 0 3px;
-  color: #aaa;
-}
-@media (max-width: 700px) {
-  .footer-content { flex-direction: column; gap: 8px; }
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .nav-table td {
+    padding: 8px 3px;
+    font-size: 0.9em;
+  }
+  .leaderboard-table {
+    max-width: 95%;
+  }
 }
 </style>
 
-<!-- Меню -->
-<div class="menu-nav">
-  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
-  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
-  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
-  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
-  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
-</div>
+<!-- Навигация -->
+<table class="nav-table">
+  <tr>
+    <td><a href="/Beer-Syndicate/" class="nav-link">Главная</a></td>
+    <td><a href="/Beer-Syndicate/about" class="nav-link">О гильдии</a></td>
+    <td><a href="/Beer-Syndicate/members" class="nav-link">Состав</a></td>
+    <td><a href="/Beer-Syndicate/recruit" class="nav-link">Как вступить</a></td>
+    <td><a href="/Beer-Syndicate/contacts" class="nav-link">Контакты</a></td>
+  </tr>
+</table>
 
 <!-- Блок топа -->
-<div class="top-wrap">
-  <div class="top-title">Топ-5 по вкладу за неделю</div>
-  <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
-  <table class="top-table">
+<div class="top-section">
+  <h2 class="section-title">Топ-5 по вкладу за неделю</h2>
+  <div class="update-time">Последнее обновление: 17.06.25 12:14</div>
+  
+  <table class="leaderboard-table">
     <tr>
       <th>Место</th>
       <th>Имя</th>
@@ -198,40 +171,33 @@
     </tr>
   </table>
   
-  <!-- Таймер и победители -->
-  <div class="timer-block">
-    До сброса топа: <span class="timer">4д 11ч 36м 1с</span>
+  <div class="timer">
+    До сброса топа: <strong>4д 11ч 23м 32с</strong>
   </div>
-  <div class="winners-block">
+  <div class="winners">
     Победители прошлой недели: ---
   </div>
 </div>
 
 <!-- Футер -->
-<footer class="footer-main">
-  <div class="footer-content">
-    <span>© 2025 Beer-Syndicate</span>
-    <span class="footer-links">
-      <a href="/Beer-Syndicate/contacts">Контакты</a>
-      <span>|</span>
-      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
-      <span>|</span>
-      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
-    </span>
+<div class="footer">
+  <div>© 2025 Beer-Syndicate</div>
+  <div class="footer-links">
+    <a href="/Beer-Syndicate/contacts">Контакты</a>
+    <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+    <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
   </div>
-</footer>
+</div>
 
 <!-- Скрипт таймера -->
 <script>
   function updateTimer() {
-    // Вычисляем время до следующей субботы 23:59
     const now = new Date();
     const nextSaturday = new Date();
-    const daysUntilSaturday = (6 - now.getDay() + 7) % 7; // 6 = суббота
+    const daysUntilSaturday = (6 - now.getDay() + 7) % 7;
     nextSaturday.setDate(now.getDate() + daysUntilSaturday);
     nextSaturday.setHours(23, 59, 0, 0);
 
-    // Если сегодня суббота и время ещё не 23:59
     if (now.getDay() === 6 && now.getHours() < 23) {
       nextSaturday.setDate(now.getDate());
     }
@@ -242,16 +208,9 @@
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    // Обновляем таймер
-    const timerElement = document.querySelector('.timer');
-    if (diff > 0) {
-      timerElement.textContent = `${days}д ${hours}ч ${minutes}м ${seconds}с`;
-    } else {
-      timerElement.textContent = "Топ сброшен!";
-    }
+    document.querySelector('.timer strong').textContent = 
+      `${days}д ${hours}ч ${minutes}м ${seconds}с`;
   }
-
-  // Запускаем таймер сразу и обновляем каждую секунду
   updateTimer();
   setInterval(updateTimer, 1000);
 </script>
