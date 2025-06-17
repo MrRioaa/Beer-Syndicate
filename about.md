@@ -79,7 +79,7 @@
 
 <!-- Меню -->
 <div class="menu-nav">
-  <a href="/Beer-Syndicate/index" class="menu-btn">Главная</a>
+  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
   <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
   <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
   <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
