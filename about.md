@@ -36,6 +36,10 @@
       padding: 32px 28px 22px 28px;
       border: 1.5px solid var(--beer-border);
       position: relative;
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+      min-height: 600px;
     }
     .menu-nav {
       display: flex;
@@ -79,19 +83,19 @@
       color: var(--beer-panel);
       box-shadow: 0 2.5px 13px #ffde694a;
     }
-    .about-wrap {
-      max-width: 700px;
-      margin: 0 auto 36px auto;
+    .about-content {
+      width: 700px;
       background: var(--beer-panel-light);
       border-radius: 18px;
       box-shadow: 0 2px 12px #0005;
-      padding: 36px 30px 32px 30px;
+      padding: 38px 34px 36px 34px;
       font-size: 1.13em;
-      position: relative;
       color: var(--beer-cream);
       border: 2px solid var(--beer-border);
+      margin: 0 auto 0 0;
+      position: relative;
     }
-    .about-wrap h2 {
+    .about-content h2 {
       margin-top: 0.5em;
       color: var(--beer-yellow);
       font-size: 1.38em;
@@ -124,26 +128,38 @@
       color: var(--beer-yellow2);
       margin-right: 7px;
     }
+    hr {
+      border: none;
+      border-top: 2px solid var(--beer-yellow2);
+      background: none;
+      margin: 2em 0 1.2em 0;
+      opacity: 0.3;
+    }
     /* Баннер справа */
     .about-banner {
-      position: absolute;
-      right: -270px;
-      top: 12px;
-      width: 240px;
+      min-width: 235px;
+      max-width: 270px;
+      width: 245px;
+      position: static;
       background: linear-gradient(90deg,#4c381c 60%,#ffde6933 100%);
       border-radius: 14px;
       box-shadow: 0 2px 12px #000a, 0 2px 12px #ffc34a33;
       color: var(--beer-yellow2);
       font-weight: 700;
       font-size: 1.09em;
-      padding: 16px 20px 16px 22px;
+      padding: 26px 20px 20px 22px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 14px;
-      text-align: left;
+      text-align: center;
       transition: box-shadow 0.15s, background 0.15s;
       border: 2px solid var(--beer-brown);
       z-index: 3;
+      margin-left: 0;
+      margin-top: 12px;
+      height: fit-content;
+      align-self: flex-start;
     }
     .about-banner a {
       color: var(--beer-yellow);
@@ -157,16 +173,29 @@
       color: var(--beer-orange);
       border-bottom: 2px solid var(--beer-orange);
     }
-    hr {
-      border: none;
-      border-top: 2px solid var(--beer-yellow2);
-      background: none;
-      margin: 2em 0 1.2em 0;
-      opacity: 0.3;
+    @media (max-width: 1200px) {
+      .main-wrapper {
+        flex-direction: column;
+        gap: 0;
+        min-height: unset;
+      }
+      .about-content, .about-banner {
+        max-width: 98vw;
+        width: 99vw;
+      }
+      .about-banner { margin: 22px auto 10px auto; justify-content: center; }
+    }
+    @media (max-width: 900px) {
+      .main-wrapper { padding: 8vw 0 5vw 0; }
+      .about-content { padding: 6vw 2vw; }
+      .about-banner { font-size:1em; padding:12px 10px;}
+    }
+    @media (max-width: 700px) {
+      .footer-content { flex-direction: column; gap: 8px; }
     }
     footer.footer-main {
-      width: 100%;
-      margin-top: 36px;
+      width: 100vw;
+      margin-top: 40px;
       background: linear-gradient(90deg, #38280f 40%, #523813 100%);
       border-radius: 18px 18px 0 0;
       box-shadow: 0 -1px 13px #000a;
@@ -177,9 +206,14 @@
       justify-content: center;
       font-weight: 600;
       border-top: 3px solid var(--beer-yellow2);
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
     .footer-content {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -202,43 +236,18 @@
       margin: 0 3px;
       color: var(--beer-brown-dark);
     }
-    @media (max-width: 1200px) {
-      .about-banner {
-        position: static;
-        width: auto;
-        margin: 22px auto 10px auto;
-        justify-content: center;
-        right: unset; top: unset; left: unset;
-      }
-    }
-    @media (max-width: 800px) {
-      .about-wrap, .menu-nav { max-width: 97vw;}
-      .about-banner {font-size:1em; padding:12px 10px;}
-    }
-    @media (max-width: 700px) {
-      .footer-content { flex-direction: column; gap: 8px; }
-    }
   </style>
 </head>
 <body>
+  <nav class="menu-nav">
+    <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+    <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
+    <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+    <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+    <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+  </nav>
   <div class="main-wrapper">
-    <!-- Меню -->
-    <nav class="menu-nav">
-      <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
-      <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
-      <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
-      <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
-      <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
-    </nav>
-
-    <!-- Основной блок -->
-    <div class="about-wrap">
-
-      <!-- БАННЕР -->
-      <div class="about-banner">
-        🏆 <span style="font-size:1.08em">Текущий <a href="/Beer-Syndicate/top">топ-5 вкладчиков недели</a></span>
-      </div>
-
+    <div class="about-content">
       <h2>Добро пожаловать в «Пивной Синдикат»!</h2>
       <p>Наша гильдия создана для комфортной и совместной игры:</p>
       <ul class="about-list">
@@ -279,6 +288,10 @@
         <b style="color:#e53935;">NSFW-контент запрещён.</b>
       </p>
     </div>
+    <!-- Баннер справа -->
+    <aside class="about-banner">
+      <span style="font-size:1.17em;">🏆 Текущий <a href="/Beer-Syndicate/top">топ-5 вкладчиков недели</a></span>
+    </aside>
   </div>
   <footer class="footer-main">
     <div class="footer-content">
