@@ -35,14 +35,22 @@
   border-color: #7dbdff;
   color: #145ba0;
 }
-.contacts-wrap {
-  max-width: 700px;
+.contacts-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  max-width: 1050px;
   margin: 0 auto 36px auto;
+}
+.contacts-wrap {
+  flex: 1 1 470px;
+  max-width: 700px;
   background: #fcfcfd;
   border-radius: 18px;
   box-shadow: 0 2px 12px #0001;
   padding: 32px 28px 28px 28px;
   font-size: 1.15em;
+  min-width: 330px;
 }
 .contacts-title {
   font-size: 1.4em;
@@ -121,6 +129,61 @@
   min-width: 72px;
   display: inline-block;
 }
+
+/* Баннер */
+.contacts-banner {
+  flex: 0 0 295px;
+  background: linear-gradient(135deg,#f8e594 60%,#ffefae 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 18px #ffe08a4d;
+  padding: 32px 26px 28px 26px;
+  margin-top: 10px;
+  min-width: 240px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.banner-ico {
+  font-size: 2.3em;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 2px 3px #ffecb3b8);
+}
+.banner-title {
+  font-size: 1.13em;
+  font-weight: 700;
+  color: #ad8809;
+  margin-bottom: 8px;
+}
+.banner-text {
+  color: #b98c0a;
+  margin-bottom: 18px;
+  font-size: 1.05em;
+}
+.banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #ffe69a;
+  border-radius: 7px;
+  color: #b27c08;
+  font-weight: 700;
+  padding: 8px 18px;
+  font-size: 1.07em;
+  box-shadow: 0 2px 8px #ffe08a60;
+  text-decoration: none;
+  border: 1px solid #ffda73;
+  transition: background 0.15s, box-shadow 0.15s, color 0.15s;
+}
+.banner-link:hover {
+  background: #ffda73;
+  color: #986b00;
+}
+@media (max-width: 1100px) {
+  .contacts-layout { flex-direction: column; gap: 0;}
+  .contacts-banner { margin: 0 auto 22px auto; }
+}
 </style>
 
 <!-- Меню -->
@@ -132,32 +195,47 @@
   <a href="/Beer-Syndicate/contacts" class="menu-btn active">Контакты</a>
 </div>
 
-<!-- Контакты -->
-<div class="contacts-wrap">
-  <div class="contacts-title">Наши ресурсы</div>
-  <ul class="contacts-list">
-    <li>📢 <a class="contacts-link" href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал гильдии</a></li>
-    <li>💬 <a class="contacts-link" href="https://t.me/+igz_gbmt_OE5YTVi" target="_blank">Telegram-чат (группа)</a></li>
-    <li>🎮 <a class="contacts-link" href="https://discord.gg/wnCxVG2m" target="_blank">Discord сервер</a></li>
-  </ul>
+<div class="contacts-layout">
+  <!-- Контакты -->
+  <div class="contacts-wrap">
+    <div class="contacts-title">Наши ресурсы</div>
+    <ul class="contacts-list">
+      <li>📢 <a class="contacts-link" href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал гильдии</a></li>
+      <li>💬 <a class="contacts-link" href="https://t.me/+igz_gbmt_OE5YTVi" target="_blank">Telegram-чат (группа)</a></li>
+      <li>🎮 <a class="contacts-link" href="https://discord.gg/wnCxVG2m" target="_blank">Discord сервер</a></li>
+    </ul>
 
-  <div class="leader-block">
-    <div class="leader-title">Пивной Барон (Лидер гильдии)</div>
-    <div class="leader-contacts">
-      <span><span class="leader-label">Ник:</span> <b>СаняДробовик</b></span>
-      <span><span class="leader-label">Telegram:</span>
-        <a class="contacts-link" href="https://t.me/Mr_NN1" target="_blank">@Mr_NN1</a>
-      </span>
-      <span><span class="leader-label">Discord:</span>
-        <b>mrriooff</b>
-      </span>
+    <div class="leader-block">
+      <div class="leader-title">Пивной Барон (Лидер гильдии)</div>
+      <div class="leader-contacts">
+        <span><span class="leader-label">Ник:</span> <b>СаняДробовик</b></span>
+        <span><span class="leader-label">Telegram:</span>
+          <a class="contacts-link" href="https://t.me/Mr_NN1" target="_blank">@Mr_NN1</a>
+        </span>
+        <span><span class="leader-label">Discord:</span>
+          <b>mrriooff</b>
+        </span>
+      </div>
+      <div class="officers-title">Офицеры («Пивозавры»)</div>
+      <div class="officer-list">
+        <span><span class="officer-label">Офицер 1:</span> <b>–</b></span>
+        <span><span class="officer-label">Офицер 2:</span> <b>–</b></span>
+        <span><span class="officer-label">Офицер 3:</span> <b>–</b></span>
+        <span><span class="officer-label">Офицер 4:</span> <b>–</b></span>
+      </div>
     </div>
-    <div class="officers-title">Офицеры («Пивозавры»)</div>
-    <div class="officer-list">
-      <span><span class="officer-label">Офицер 1:</span> <b>–</b></span>
-      <span><span class="officer-label">Офицер 2:</span> <b>–</b></span>
-      <span><span class="officer-label">Офицер 3:</span> <b>–</b></span>
-      <span><span class="officer-label">Офицер 4:</span> <b>–</b></span>
+  </div>
+
+  <!-- БАННЕР -->
+  <div class="contacts-banner">
+    <div class="banner-ico">🏆</div>
+    <div class="banner-title">Топ-5 недели</div>
+    <div class="banner-text">
+      Смотри рейтинг самых активных участников по вкладу!<br>Обновляется каждую неделю.
     </div>
+    <a href="/Beer-Syndicate/top" class="banner-link">
+      Перейти к топу
+      <span style="font-size:1.13em;">→</span>
+    </a>
   </div>
 </div>
