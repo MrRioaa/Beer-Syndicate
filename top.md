@@ -149,3 +149,57 @@
     Победители 1 недели: ----------
   </div>
 </div>
+<footer class="footer-main">
+  <div class="footer-content">
+    <span>© 2025 Beer-Syndicate</span>
+    <span class="footer-links">
+      <a href="/Beer-Syndicate/contacts">Контакты</a>
+      <span>|</span>
+      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+      <span>|</span>
+      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+    </span>
+  </div>
+</footer>
+
+<style>
+.footer-main {
+  width: 100%;
+  margin-top: 36px;
+  background: #f7f7f7;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -1px 6px #0001;
+  padding: 18px 0 14px 0;
+  font-size: 1.04em;
+  color: #789;
+  display: flex;
+  justify-content: center;
+}
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+}
+.footer-links a {
+  color: #145ba0;
+  text-decoration: none;
+  margin: 0 4px;
+  font-weight: 600;
+  transition: color 0.13s;
+}
+.footer-links a:hover {
+  color: #e3b108;
+  text-decoration: underline;
+}
+.footer-links span {
+  margin: 0 3px;
+  color: #aaa;
+}
+@media (max-width: 700px) {
+  .footer-content { flex-direction: column; gap: 8px; }
+}
+</style>
