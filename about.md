@@ -41,6 +41,14 @@
 }
 </style>
 
+<div class="menu-nav">
+  <a href="/" class="menu-btn">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+</div>
+
 <div class="about-wrap">
 
 <h2>Добро пожаловать в «Пивной Синдикат»!</h2>
