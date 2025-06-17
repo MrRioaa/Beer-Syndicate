@@ -35,9 +35,17 @@
   border-color: #7dbdff;
   color: #145ba0;
 }
+
+.members-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  max-width: 1030px;
+  margin: 0 auto 36px auto;
+}
 .members-wrap {
   max-width: 700px;
-  margin: 0 auto 36px auto;
+  flex: 1 1 0px;
   background: #fcfcfd;
   border-radius: 18px;
   box-shadow: 0 2px 12px #0001;
@@ -84,6 +92,50 @@
   margin-left: 8px;
   font-size: 0.93em;
 }
+.banner-side {
+  min-width: 225px;
+  max-width: 240px;
+  margin-top: 8px;
+  margin-left: 0;
+  background: linear-gradient(120deg,#fff8e2 60%,#f2e5c1 100%);
+  border-radius: 15px;
+  box-shadow: 0 2px 12px #ffe08a70;
+  padding: 22px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-title {
+  color: #b48b0a;
+  font-weight: 700;
+  font-size: 1.11em;
+  margin-bottom: 6px;
+}
+.banner-txt {
+  font-size: 1em;
+  color: #8a7428;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.banner-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(90deg,#ffe99a 60%,#ffda73 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #ffe08a60;
+  color: #bd890b;
+  font-weight: 700;
+  padding: 8px 18px;
+  font-size: 1.02em;
+  text-decoration: none;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+.banner-btn:hover {
+  background: #ffe08a;
+  color: #8a7428;
+}
+@media (max-width: 1000px) {
+  .members-main { flex-direction: column; gap: 24px; }
+  .banner-side { max-width: 99vw; min-width: unset; width: 98vw; }
 }
 </style>
 
@@ -96,52 +148,50 @@
   <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
 </div>
 
-<div class="members-wrap">
-  <div class="members-title">Состав гильдии</div>
-  
-  <!-- Лидер -->
-  <div class="rank-header">Пивной Барон (Лидер гильдии)</div>
-  <table class="members-table">
-    <tr class="member-row">
-      <td class="member-cell">СаняДробовик <span class="leader-badge">Лидер</span></td>
-    </tr>
-  </table>
-
-  <!-- Офицеры -->
-  <div class="rank-header" style="margin-top: 18px;">Пивозавры (Офицеры)</div>
-  <table class="members-table">
-    <tr class="member-row">
-      <td class="member-cell">Офицер 1</td>
-    </tr>
-    <tr class="member-row">
-      <td class="member-cell">Офицер 2</td>
-    </tr>
-    <tr class="member-row">
-      <td class="member-cell">Офицер 3</td>
-    </tr>
-    <tr class="member-row">
-      <td class="member-cell">Офицер 4</td>
-    </tr>
-  </table>
-
-  <!-- Подпивасы -->
-  <div class="rank-header" style="margin-top: 18px;">Подпивасы</div>
-  <table class="members-table">
-    <tr class="member-row"><td class="member-cell">Подпивас 1</td></tr>
-    <tr class="member-row"><td class="member-cell">Подпивас 2</td></tr>
-  </table>
-
-  <!-- Алкаши -->
-  <div class="rank-header" style="margin-top: 18px;">Алкаши</div>
-  <table class="members-table">
-    <tr class="member-row"><td class="member-cell">Алкаш 1</td></tr>
-    <tr class="member-row"><td class="member-cell">Алкаш 2</td></tr>
-  </table>
-
-  <!-- Пивусики -->
-  <div class="rank-header" style="margin-top: 18px;">Пивусики</div>
-  <table class="members-table">
-    <tr class="member-row"><td class="member-cell">Пивусик 1</td></tr>
-    <tr class="member-row"><td class="member-cell">Пивусик 2</td></tr>
-  </table>
+<div class="members-main">
+  <div class="members-wrap">
+    <div class="members-title">Состав гильдии</div>
+    <!-- Лидер -->
+    <div class="rank-header">Пивной Барон (Лидер гильдии)</div>
+    <table class="members-table">
+      <tr class="member-row">
+        <td class="member-cell">СаняДробовик <span class="leader-badge">Лидер</span></td>
+      </tr>
+    </table>
+    <!-- Офицеры -->
+    <div class="rank-header" style="margin-top: 18px;">Пивозавры (Офицеры)</div>
+    <table class="members-table">
+      <tr class="member-row"><td class="member-cell">Офицер 1</td></tr>
+      <tr class="member-row"><td class="member-cell">Офицер 2</td></tr>
+      <tr class="member-row"><td class="member-cell">Офицер 3</td></tr>
+      <tr class="member-row"><td class="member-cell">Офицер 4</td></tr>
+    </table>
+    <!-- Подпивасы -->
+    <div class="rank-header" style="margin-top: 18px;">Подпивасы</div>
+    <table class="members-table">
+      <tr class="member-row"><td class="member-cell">Подпивас 1</td></tr>
+      <tr class="member-row"><td class="member-cell">Подпивас 2</td></tr>
+    </table>
+    <!-- Алкаши -->
+    <div class="rank-header" style="margin-top: 18px;">Алкаши</div>
+    <table class="members-table">
+      <tr class="member-row"><td class="member-cell">Алкаш 1</td></tr>
+      <tr class="member-row"><td class="member-cell">Алкаш 2</td></tr>
+    </table>
+    <!-- Пивусики -->
+    <div class="rank-header" style="margin-top: 18px;">Пивусики</div>
+    <table class="members-table">
+      <tr class="member-row"><td class="member-cell">Пивусик 1</td></tr>
+      <tr class="member-row"><td class="member-cell">Пивусик 2</td></tr>
+    </table>
+  </div>
+  <div class="banner-side">
+    <div class="banner-title">🏆 Текущий топ-5 по вкладу</div>
+    <div class="banner-txt">
+      Узнай, кто сейчас лидирует по вкладу в гильдию и кто получит награды на этой неделе!
+    </div>
+    <a href="/Beer-Syndicate/top" class="banner-btn">
+      Перейти к топу недели →
+    </a>
+  </div>
 </div>
