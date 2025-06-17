@@ -1,77 +1,128 @@
 <style>
-.top5-wrap {
+.menu-nav {
+  display: flex; 
+  justify-content: center; 
+  gap: 18px; 
+  background: #f7f7f7; 
+  padding: 18px 0 16px 0; 
+  border-radius: 0 0 14px 14px; 
+  box-shadow: 0 2px 8px #0001;
+  margin-bottom: 40px;
   max-width: 700px;
-  margin: 0 auto 36px auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu-btn {
+  background: #fff;
+  color: #2d2d2d;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 26px;
+  text-decoration: none;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  box-shadow: 0 2px 6px #0002;
+  border: 1px solid #ececec;
+  display: inline-block;
+}
+.menu-btn:hover, .menu-btn:focus {
+  background: #ffda73;
+  border-color: #f3c143;
+  color: #222;
+  outline: none;
+}
+.menu-btn.active {
+  background: #e3f1ff;
+  border-color: #7dbdff;
+  color: #145ba0;
+}
+.top-wrap {
+  max-width: 600px;
+  margin: 40px auto 0 auto;
   background: #fcfcfd;
   border-radius: 18px;
   box-shadow: 0 2px 12px #0001;
   padding: 32px 28px 28px 28px;
-  font-size: 1.12em;
+  font-size: 1.13em;
 }
-.top5-title {
-  font-size: 1.3em;
+.top-title {
+  font-size: 1.5em;
   font-weight: 700;
   color: #145ba0;
-  margin-bottom: 18px;
-}
-.top5-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 6px;
   margin-bottom: 22px;
 }
-.top5-table th, .top5-table td {
-  text-align: center;
-  padding: 10px 8px;
+.top-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
 }
-.top5-table th {
-  background: #e3f1ff;
+.top-table th {
+  background: #eaf4ff;
   color: #2979ff;
   font-weight: 700;
-  border-radius: 7px 7px 0 0;
-  font-size: 1.02em;
-  border-left: 2px solid #c3dbf9;
-  border-right: 2px solid #c3dbf9;
+  font-size: 1em;
+  padding: 8px 0;
+  border-radius: 6px 6px 0 0;
 }
-.top5-table tr {
-  background: #f9f9f9;
-  border-radius: 7px;
-  box-shadow: 0 1px 4px #0001;
-  font-size: 1.06em;
+.top-table th,
+.top-table td {
+  text-align: center;
+  border: 1px solid #e4e8ee;
+  padding: 8px 12px;
 }
-.top5-table td {
-  border-left: 2px solid #f1f5fa;
-  border-right: 2px solid #f1f5fa;
-}
-.top5-table tr.gold {
-  background: #fffbe6;
-  font-weight: 700;
+.top-table tr:nth-child(2) td {
+  background: #fff9e2;
   color: #bd890b;
-  box-shadow: 0 2px 10px #ffe08a50;
+  font-weight: 700;
 }
-.top5-prev {
-  font-size: 0.99em;
-  margin-top: 8px;
+.top-table tr:not(:nth-child(2)) td {
+  background: #f8fafc;
+}
+.top-table td {
+  font-size: 1.05em;
+}
+.top-update {
   color: #888;
-  padding-left: 4px;
+  font-size: 0.97em;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: right;
 }
-@media (max-width: 600px) {
-  .top5-wrap { padding: 10px 2vw; }
-  .top5-table th, .top5-table td { padding: 7px 1vw; }
+.top-winners {
+  margin-top: 14px;
+  font-size: 1.02em;
+  color: #7a7a7a;
+}
+@media (max-width: 800px) {
+  .menu-nav,
+  .top-wrap {
+    max-width: 97vw;
+  }
+  .top-title { font-size: 1.13em; }
 }
 </style>
 
-<div class="top5-wrap">
-  <div class="top5-title">Топ-5 по вкладу за неделю</div>
-  <table class="top5-table">
+<!-- Меню -->
+<div class="menu-nav">
+  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+  <a href="/Beer-Syndicate/top" class="menu-btn active">Топ-5 недели</a>
+</div>
+
+<div class="top-wrap">
+  <div class="top-title">Топ-5 по вкладу за неделю</div>
+  <div class="top-update">Последнее обновление: 17.06.25 6:00</div>
+  <table class="top-table">
     <tr>
       <th>Место</th>
       <th>Имя</th>
       <th>Вклад (неделя)</th>
     </tr>
-    <tr class="gold">
+    <tr>
       <td>1</td>
-      <td>Санядробовик</td>
+      <td>Сандядробовик</td>
       <td>160</td>
     </tr>
     <tr>
@@ -95,9 +146,7 @@
       <td>30</td>
     </tr>
   </table>
-
-  <div class="top5-prev">
-    <b>Победители 1 недели:</b>  
-    ----------
+  <div class="top-winners">
+    Победители 1 недели: ----------
   </div>
 </div>
