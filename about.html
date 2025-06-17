@@ -2,66 +2,83 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>О гильдии | Пивной Синдикат</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Пивной Синдикат | ArcheAge</title>
   <style>
+    :root {
+      --beer-bg: #2b2116;
+      --beer-panel: #3b2e22;
+      --beer-panel-light: #53422d;
+      --beer-cream: #fff8e1;
+      --beer-cream2: #ffe3a3;
+      --beer-yellow: #FFDE69;
+      --beer-yellow2: #FFC34A;
+      --beer-orange: #FFA941;
+      --beer-brown: #A87536;
+      --beer-brown-dark: #6e4923;
+      --beer-border: #6e4923;
+      --beer-shadow: #0008;
+    }
     body {
-      background: #2b2116;
-      margin: 0;
       font-family: 'Segoe UI', 'Arial', sans-serif;
-      color: #fff8e1;
+      background: var(--beer-bg);
+      margin: 0;
+      padding: 0;
+      color: var(--beer-cream);
       min-height: 100vh;
     }
-   .menu-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  background: var(--beer-panel);
-  border-radius: 18px;
-  box-shadow: 0 3px 16px #000a, 0 1.5px 4px #ffde6930;
-  padding: 14px 0;
-  margin-bottom: 32px;
-  border: 2px solid var(--beer-brown);
-}
-.menu-btn {
-  background: var(--beer-cream2);
-  color: var(--beer-panel);
-  font-weight: 700;
-  border-radius: 10px;
-  padding: 10px 26px;
-  text-decoration: none;
-  font-size: 1.08em;
-  transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
-  box-shadow: 0 1.5px 7px #ffc34a1c;
-  border: 2px solid transparent;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  top: 0;
-}
-.menu-btn:hover, .menu-btn:focus {
-  background: var(--beer-yellow);
-  color: var(--beer-panel);
-  border-color: var(--beer-orange);
-  box-shadow: 0 2.5px 18px #ffde6933;
-  transform: translateY(-2px) scale(1.04);
-  z-index: 2;
-}
-.menu-btn.active {
-  background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
-  border-color: var(--beer-orange);
-  color: var(--beer-panel);
-  box-shadow: 0 2.5px 13px #ffde694a;
-}
-@media (max-width: 1100px) {
-  .menu-nav-float {gap:14px;padding:12px 3vw;}
-  .menu-btn-float {padding:9px 2vw;min-width:80px;font-size:1em;}
-}
-@media (max-width: 600px) {
-  .menu-nav-float {flex-direction:column;gap:8px;padding:7px 2vw;}
-  .menu-btn-float {padding:10px 6vw;min-width:unset;width:95vw;}
-}
+    .main-wrapper {
+      max-width: 980px;
+      margin: 38px auto 0 auto;
+      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 36px #000b, 0 1.5px 6px #ffde6930;
+      padding: 32px 28px 22px 28px;
+      border: 1.5px solid var(--beer-border);
+      position: relative;
+    }
+    .menu-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      background: var(--beer-panel);
+      border-radius: 18px;
+      box-shadow: 0 3px 16px #000a, 0 1.5px 4px #ffde6930;
+      padding: 14px 0;
+      margin-bottom: 32px;
+      border: 2px solid var(--beer-brown);
+    }
+    .menu-btn {
+      background: var(--beer-cream2);
+      color: var(--beer-panel);
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 26px;
+      text-decoration: none;
+      font-size: 1.08em;
+      transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
+      box-shadow: 0 1.5px 7px #ffc34a1c;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      top: 0;
+    }
+    .menu-btn:hover, .menu-btn:focus {
+      background: var(--beer-yellow);
+      color: var(--beer-panel);
+      border-color: var(--beer-orange);
+      box-shadow: 0 2.5px 18px #ffde6933;
+      transform: translateY(-2px) scale(1.04);
+      z-index: 2;
+    }
+    .menu-btn.active {
+      background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
+      border-color: var(--beer-orange);
+      color: var(--beer-panel);
+      box-shadow: 0 2.5px 13px #ffde694a;
+    }
 
     .main-content {
       max-width: 1150px;
