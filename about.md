@@ -111,7 +111,7 @@
   <li><span class="rule-label">Честность —</span> никакого скама, краж из общего склада или обмана согильдийцев.</li>
   <li><span class="rule-label">Конфликты —</span> решаем мирно через офицеров/лидера, а не переходим на личности.</li>
 </ul>
-<div class="about-rule-title"><span class="rule-num">3️⃣</span> В Discord/Telegram</div>
+<div class="about-rule-title"><span class="rule-num">3️⃣</span> В Discord</div>
 <p><b>Голосовые каналы:</b></p>
 <ul class="rule-list">
   <li>Гостиная — Общение с новобранцами</li>
