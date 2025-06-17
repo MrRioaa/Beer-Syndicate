@@ -97,11 +97,29 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 16px;
 }
 .leader-label {
   color: #888;
   font-size: 0.98em;
   margin-right: 4px;
+}
+.officers-title {
+  font-weight: 700;
+  color: #2979ff;
+  margin-top: 1.3em;
+  margin-bottom: 0.7em;
+}
+.officer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.officer-label {
+  color: #888;
+  font-size: 0.97em;
+  min-width: 72px;
+  display: inline-block;
 }
 </style>
 
@@ -117,20 +135,29 @@
 <!-- Контакты -->
 <div class="contacts-wrap">
   <div class="contacts-title">Наши ресурсы</div>
-  $1
+  <ul class="contacts-list">
     <li>📢 <a class="contacts-link" href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал гильдии</a></li>
+    <li>💬 <a class="contacts-link" href="https://t.me/+igz_gbmt_OE5YTVi" target="_blank">Telegram-чат (группа)</a></li>
     <li>🎮 <a class="contacts-link" href="https://discord.gg/wnCxVG2m" target="_blank">Discord сервер</a></li>
   </ul>
 
   <div class="leader-block">
-    <div class="leader-title">Контакты лидера гильдии</div>
+    <div class="leader-title">Пивной Барон (Лидер гильдии)</div>
     <div class="leader-contacts">
+      <span><span class="leader-label">Ник:</span> <b>MrRioaa</b></span>
       <span><span class="leader-label">Telegram:</span>
         <a class="contacts-link" href="https://t.me/Mr_NN1" target="_blank">@Mr_NN1</a>
       </span>
       <span><span class="leader-label">Discord:</span>
         <b>mrriooff</b>
       </span>
+    </div>
+    <div class="officers-title">Офицеры («Пивозавры»)</div>
+    <div class="officer-list">
+      <span><span class="officer-label">Офицер 1:</span> <b>–</b></span>
+      <span><span class="officer-label">Офицер 2:</span> <b>–</b></span>
+      <span><span class="officer-label">Офицер 3:</span> <b>–</b></span>
+      <span><span class="officer-label">Офицер 4:</span> <b>–</b></span>
     </div>
   </div>
 </div>
