@@ -57,7 +57,7 @@
 .top-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto 18px auto;
+  margin: 10 auto 18px auto;
 }
 .top-table th {
   background: #eaf4ff;
