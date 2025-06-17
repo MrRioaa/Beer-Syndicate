@@ -35,9 +35,17 @@
   border-color: #7dbdff;
   color: #145ba0;
 }
+
+.recruit-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  max-width: 1030px;
+  margin: 0 auto 36px auto;
+}
 .recruit-wrap {
   max-width: 700px;
-  margin: 0 auto 36px auto;
+  flex: 1 1 0px;
   background: #fcfcfd;
   border-radius: 18px;
   box-shadow: 0 2px 12px #0001;
@@ -67,6 +75,51 @@
   color: #e3b108;
   text-decoration: underline;
 }
+.banner-side {
+  min-width: 225px;
+  max-width: 240px;
+  margin-top: 8px;
+  margin-left: 0;
+  background: linear-gradient(120deg,#fff8e2 60%,#f2e5c1 100%);
+  border-radius: 15px;
+  box-shadow: 0 2px 12px #ffe08a70;
+  padding: 22px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-title {
+  color: #b48b0a;
+  font-weight: 700;
+  font-size: 1.11em;
+  margin-bottom: 6px;
+}
+.banner-txt {
+  font-size: 1em;
+  color: #8a7428;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.banner-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(90deg,#ffe99a 60%,#ffda73 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #ffe08a60;
+  color: #bd890b;
+  font-weight: 700;
+  padding: 8px 18px;
+  font-size: 1.02em;
+  text-decoration: none;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+.banner-btn:hover {
+  background: #ffe08a;
+  color: #8a7428;
+}
+@media (max-width: 1000px) {
+  .recruit-main { flex-direction: column; gap: 24px; }
+  .banner-side { max-width: 99vw; min-width: unset; width: 98vw; }
+}
 </style>
 
 <!-- Меню -->
@@ -78,12 +131,22 @@
   <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
 </div>
 
-<!-- Контент -->
-<div class="recruit-wrap">
-  <div class="recruit-title">Как вступить в гильдию</div>
-  <ul class="recruit-list">
-    <li>Если вас уже пригласили, просто заходите в наш <a class="recruit-link" href="https://t.me/+igz_gbmt_OE5YTVi" target="_blank">Telegram-чат</a> или <a class="recruit-link" href="https://discord.gg/wnCxVG2m" target="_blank">Discord-сервер</a>. Представьтесь и напишите, кто вас пригласил.</li>
-    <li>Если вас никто не приглашал, напишите <b>лидеру гильдии</b> — <a class="recruit-link" href="https://t.me/Mr_NN1" target="_blank">@Mr_NN1 (Telegram)</a> или <b>одному из офицеров</b> (см. раздел “Контакты”). Кратко расскажите о себе и зачем хотите к нам.</li>
-  </ul>
-  <div style="margin-top:1.2em; color:#888;">После подтверждения заявки вам объяснят все нюансы и добавят в гильдию.</div>
+<div class="recruit-main">
+  <div class="recruit-wrap">
+    <div class="recruit-title">Как вступить в гильдию</div>
+    <ul class="recruit-list">
+      <li>Если вас уже пригласили, просто заходите в наш <a class="recruit-link" href="https://t.me/+igz_gbmt_OE5YTVi" target="_blank">Telegram-чат</a> или <a class="recruit-link" href="https://discord.gg/wnCxVG2m" target="_blank">Discord-сервер</a>. Представьтесь и напишите, кто вас пригласил.</li>
+      <li>Если вас никто не приглашал, напишите <b>лидеру гильдии</b> — <a class="recruit-link" href="https://t.me/Mr_NN1" target="_blank">@Mr_NN1 (Telegram)</a> или <b>одному из офицеров</b> (см. раздел “Контакты”). Кратко расскажите о себе и зачем хотите к нам.</li>
+    </ul>
+    <div style="margin-top:1.2em; color:#888;">После подтверждения заявки вам объяснят все нюансы и добавят в гильдию.</div>
+  </div>
+  <div class="banner-side">
+    <div class="banner-title">🍺 Хочешь вступить?</div>
+    <div class="banner-txt">
+      Вступай в наш чат или Discord — и стань частью уютной компании! <br> Пиши лидеру, если есть вопросы.
+    </div>
+    <a href="https://t.me/+igz_gbmt_OE5YTVi" class="banner-btn" target="_blank">
+      Вступить в Telegram-чат →
+    </a>
+  </div>
 </div>
