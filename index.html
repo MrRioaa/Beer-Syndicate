@@ -1,97 +1,105 @@
-with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
-    f.write("""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Пивной Синдикат | ArcheAge</title>
   <style>
+    :root {
+      --yellow-main: #FFDE69;
+      --yellow-light: #FFF8E1;
+      --yellow-btn: #FFC34A;
+      --yellow-hover: #FFEA94;
+      --orange-accent: #FFA941;
+      --brown-dark: #A87536;
+      --brown-deep: #6e4923;
+      --cream-bg: #FFF8E1;
+      --white-bg: #FFFDF7;
+    }
     body {
       font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: #f3f5f8;
+      background: var(--cream-bg);
       margin: 0;
       padding: 0;
-      color: #23272c;
+      color: var(--brown-deep);
       min-height: 100vh;
     }
     .main-wrapper {
       max-width: 980px;
       margin: 38px auto 0 auto;
-      background: #fff;
+      background: var(--white-bg);
       border-radius: 24px;
-      box-shadow: 0 6px 32px #3a6a9022, 0 1.5px 4px #0001;
+      box-shadow: 0 6px 36px #a875361a, 0 1.5px 4px #ffde6930;
       padding: 32px 28px 22px 28px;
+      border: 1.5px solid #ffe8a3;
     }
     .menu-nav {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 22px;
-      background: #f0f5fa;
+      background: var(--yellow-light);
       border-radius: 18px;
-      box-shadow: 0 3px 15px #7dbdff22, 0 1.5px 4px #0001;
-      padding: 14px 0 14px 0;
+      box-shadow: 0 3px 16px #ffde6922, 0 1.5px 4px #ffc34a15;
+      padding: 14px 0;
       margin-bottom: 32px;
-      border: 1.5px solid #e3f1ff;
-      position: relative;
-      z-index: 3;
+      border: 2px solid var(--yellow-main);
     }
     .menu-btn {
-      background: #fff;
-      color: #145ba0;
+      background: var(--yellow-main);
+      color: var(--brown-deep);
       font-weight: 700;
       border-radius: 10px;
       padding: 10px 26px;
       text-decoration: none;
       font-size: 1.08em;
-      transition: 
-        background 0.18s, 
-        box-shadow 0.18s, 
-        color 0.18s, 
-        transform 0.1s;
-      box-shadow: 0 1.5px 7px #7dbdff0d;
-      border: 1.5px solid transparent;
+      transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
+      box-shadow: 0 1.5px 7px #ffa9410d;
+      border: 2px solid transparent;
       outline: none;
       cursor: pointer;
       position: relative;
       top: 0;
     }
     .menu-btn:hover, .menu-btn:focus {
-      background: #e3f1ff;
-      color: #1460c0;
-      border-color: #7dbdff;
-      box-shadow: 0 2.5px 14px #7dbdff25;
+      background: var(--yellow-hover);
+      color: var(--brown-dark);
+      border-color: var(--orange-accent);
+      box-shadow: 0 2.5px 16px #ffde6966;
       transform: translateY(-2px) scale(1.04);
       z-index: 2;
     }
     .menu-btn.active {
-      background: linear-gradient(95deg, #e3f1ff 80%, #ffda73 200%);
-      border-color: #7dbdff;
-      color: #145ba0;
-      box-shadow: 0 2.5px 12px #7dbdff33;
+      background: linear-gradient(93deg, var(--yellow-main) 88%, var(--yellow-btn) 120%);
+      border-color: var(--orange-accent);
+      color: var(--brown-dark);
+      box-shadow: 0 2.5px 13px #ffde6966;
     }
     h1 {
-      text-align: center; 
-      font-weight: bold; 
+      text-align: center;
+      font-weight: bold;
       font-size: 2.2em;
       margin: 15px 0 10px 0;
       letter-spacing: 0.01em;
+      color: var(--brown-dark);
+      text-shadow: 0 2px 7px #ffe8a383;
     }
     .subtitle {
-      text-align: center; 
+      text-align: center;
       margin-bottom: 22px;
       font-size: 1.15em;
-      color: #488;
+      color: #b59344;
     }
     .section-title {
       font-size: 1.36em;
       font-weight: 800;
       margin-top: 0;
       margin-bottom: 16px;
-      color: #15598c;
+      color: var(--brown-dark);
       text-align: left;
       letter-spacing: 0.01em;
       padding-left: 4px;
+      text-shadow: 0 2px 7px #ffe8a34a;
     }
     .content-row {
       display: flex;
@@ -109,21 +117,22 @@ with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
       flex: 2 2 0;
     }
     .news-card {
-      background: #f9fafd;
-      border-left: 5px solid #ffda73;
+      background: var(--yellow-light);
+      border-left: 7px solid var(--yellow-main);
+      border-right: 1.5px solid #ffe8a3;
       border-radius: 11px;
-      box-shadow: 0 1.5px 8px #0001;
+      box-shadow: 0 1.5px 9px #ffc34a30;
       padding: 18px 20px 16px 20px;
       margin-bottom: 4px;
     }
     .news-card.blue {
-      border-left: 5px solid #7dbdff;
-      background: linear-gradient(90deg, #e3f1ff 90%, #f9fafd 100%);
+      border-left: 7px solid var(--orange-accent);
+      background: linear-gradient(90deg, var(--yellow-light) 90%, #fff3e0 100%);
     }
     .news-title {
       font-weight: 700;
       font-size: 1.14em;
-      color: #15598c;
+      color: var(--orange-accent);
     }
     .news-card ul {
       margin-left: 1.2em;
@@ -137,50 +146,53 @@ with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
       flex: 1 1 240px;
       max-width: 290px;
       min-width: 210px;
-      background: linear-gradient(140deg, #e3f1ff 85%, #ffefc7 100%);
+      background: linear-gradient(140deg, #fff3c6 85%, #ffe3a3 100%);
       border-radius: 14px;
-      box-shadow: 0 4px 22px #7dbdff15, 0 1.5px 7px #ffda7320;
+      box-shadow: 0 4px 22px #ffde6940, 0 1.5px 7px #a875361a;
       padding: 23px 18px 17px 18px;
       margin-top: 7px;
       text-align: center;
       font-weight: 600;
-      color: #15598c;
+      color: var(--brown-dark);
       font-size: 1.07em;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 16px;
+      border: 2px solid #ffe8a3;
     }
     .side-banner a {
-      background: linear-gradient(90deg, #ffe99a 70%, #ffda73 100%);
-      color: #145ba0;
+      background: linear-gradient(90deg, var(--yellow-btn) 70%, var(--yellow-main) 100%);
+      color: var(--brown-deep);
       font-weight: 700;
       border-radius: 8px;
-      padding: 8px 20px;
-      box-shadow: 0 2px 8px #ffe08a45;
+      padding: 10px 20px;
+      box-shadow: 0 2px 12px #ffc34a45;
       text-decoration: none;
       transition: background 0.13s, color 0.13s, box-shadow 0.15s;
       margin-top: 9px;
       font-size: 1.07em;
-      border: 1.5px solid #ffe08a;
+      border: 2px solid var(--yellow-main);
     }
     .side-banner a:hover {
-      background: linear-gradient(90deg, #fff7c2 60%, #ffe99a 100%);
-      color: #bd890b;
-      border-color: #ffda73;
-      box-shadow: 0 4px 20px #ffe08a70;
+      background: linear-gradient(90deg, var(--yellow-hover) 60%, var(--yellow-btn) 100%);
+      color: var(--brown-dark);
+      border-color: var(--orange-accent);
+      box-shadow: 0 4px 20px #ffc34a80;
     }
     footer.footer-main {
       width: 100%;
       margin-top: 40px;
-      background: #f6f7fa;
+      background: linear-gradient(90deg, #ffe19a 40%, #ffde69 100%);
       border-radius: 18px 18px 0 0;
-      box-shadow: 0 -1px 8px #e3f1ff44;
-      padding: 18px 0 12px 0;
-      font-size: 1.04em;
-      color: #789;
+      box-shadow: 0 -1px 13px #ffde6940;
+      padding: 22px 0 14px 0;
+      font-size: 1.12em;
+      color: var(--brown-dark);
       display: flex;
       justify-content: center;
+      font-weight: 600;
+      border-top: 3px solid #ffc34a;
     }
     .footer-content {
       max-width: 850px;
@@ -192,19 +204,21 @@ with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
       width: 96%;
     }
     .footer-links a {
-      color: #145ba0;
+      color: var(--brown-deep);
       text-decoration: none;
-      margin: 0 6px;
-      font-weight: 600;
+      margin: 0 8px;
+      font-weight: 700;
       transition: color 0.13s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
     }
     .footer-links a:hover {
-      color: #e3b108;
-      text-decoration: underline;
+      color: var(--orange-accent);
+      border-bottom: 2px solid var(--orange-accent);
     }
     .footer-links span {
       margin: 0 4px;
-      color: #aaa;
+      color: #b59344;
     }
     @media (max-width: 1050px) {
       .main-wrapper { max-width: 98vw; padding: 16px 5vw 12px 5vw; }
@@ -253,17 +267,17 @@ with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
         <article class="news-card blue">
           <div class="news-title">17 июня 2025 — Еженедельные выплаты за вклад в гильдию!</div>
           <div style="margin-top: 4px; font-size: 1.07em;">
-            <b>💰 Еженедельные выплаты за вклад в гильдию</b><br>
+            <b>🍺 Еженедельные выплаты за вклад в гильдию</b><br>
             <b>Суть:</b> 1 очко вклада = 1 голда.<br>
             Топ-5 участников с наибольшим вкладом получают выплаты, <b>но только если набрали минимум 160 очков за неделю.</b>
             <br><br>
-            <b style="color:#2979ff;">◆ Пример:</b>
+            <b style="color:#FFA941;">◆ Пример:</b>
             <ul>
               <li>Если у тебя <b>250 очков</b> и ты в топ-5 → получишь <b>250 голды</b>.</li>
               <li>Если у тебя <b>150 очков</b> и ты в топ-5 → не попадаешь в выплаты (мало вклада).</li>
               <li>Если у тебя <b>400 очков</b>, но ты 6-й в списке → не попадаешь в топ-5.</li>
             </ul>
-            <span style="color:#e53935; font-weight:600;">📅 Считаем каждую субботу, выплаты — в воскресенье.</span>
+            <span style="color:#a00; font-weight:600;">📅 Считаем каждую субботу, выплаты — в воскресенье.</span>
             <div style="margin-top:18px;">
               <a href="top">
                 🏆 Смотреть текущий топ-5 недели
@@ -275,7 +289,7 @@ with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
       <!-- Баннер справа -->
       <aside class="side-banner">
         <span style="font-size:1.23em;">🏅 ТОП-5 недели</span>
-        <div style="font-size:0.98em; color:#267cff;">
+        <div style="font-size:0.98em; color:var(--orange-accent);">
           <b>Кто лучший вкладчик?</b><br>
           Переходи к&nbsp;текущему рейтингу участников<br>— получи свою награду!
         </div>
@@ -297,5 +311,3 @@ with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
   </footer>
 </body>
 </html>
-""")
-
