@@ -1,5 +1,3 @@
-with open("/mnt/data/members_darkbeer_v3.html", "w", encoding="utf-8") as f:
-    f.write("""<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -310,4 +308,3 @@ with open("/mnt/data/members_darkbeer_v3.html", "w", encoding="utf-8") as f:
   </footer>
 </body>
 </html>
-""")
