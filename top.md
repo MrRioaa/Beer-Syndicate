@@ -1,144 +1,178 @@
 <style>
-/* Общие стили */
-body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #333;
+/* Стили меню (как у вас было) */
+.menu-nav {
+  display: flex; 
+  justify-content: center; 
+  gap: 18px; 
+  background: #f7f7f7; 
+  padding: 18px 0 16px 0; 
+  border-radius: 0 0 14px 14px; 
+  box-shadow: 0 2px 8px #0001;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/* Навигационное меню */
-.nav-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 30px;
-}
-.nav-table td {
-  text-align: center;
-  padding: 12px 5px;
-  border-bottom: 2px solid #f0f0f0;
-}
-.nav-link {
+.menu-btn {
+  background: #fff;
   color: #2d2d2d;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s;
+  border-radius: 8px;
+  padding: 10px 26px;
+  text-decoration: none;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  box-shadow: 0 2px 6px #0002;
+  border: 1px solid #ececec;
+  display: inline-block;
 }
-.nav-link:hover {
-  color: #e3b108;
+.menu-btn:hover, .menu-btn:focus {
+  background: #ffda73;
+  border-color: #f3c143;
+  color: #222;
+  outline: none;
 }
 
-/* Блок топа */
-.top-section {
+/* Стили блока топа */
+.top-wrap {
+  max-width: 600px;
+  margin: 0 auto 48px auto;
   background: #fcfcfd;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 32px 28px 28px 28px;
+  font-size: 1.13em;
 }
-.section-title {
+.top-title {
   font-size: 1.5em;
-  text-align: center;
-  margin-bottom: 15px;
+  font-weight: 700;
   color: #145ba0;
-}
-.update-time {
+  margin-bottom: 8px;
   text-align: center;
+}
+.top-update {
   color: #888;
-  margin-bottom: 20px;
-  font-size: 0.95em;
+  font-size: 0.97em;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
-/* Таблица топа */
-.leaderboard-table {
+/* Таблица (исправленное выравнивание) */
+.top-table {
   width: 100%;
-  max-width: 500px; /* Фиксированная ширина для выравнивания */
+  max-width: 550px; /* Фиксированная ширина */
   margin: 0 auto; /* Центрирование */
   border-collapse: collapse;
+  margin-bottom: 18px;
 }
-.leaderboard-table th {
+.top-table th {
   background: #eaf4ff;
   color: #2979ff;
-  padding: 10px 15px;
-  text-align: center;
   font-weight: 700;
-}
-.leaderboard-table td {
-  padding: 10px 15px;
+  font-size: 1em;
+  padding: 8px 12px;
   text-align: center;
-  border-bottom: 1px solid #e4e8ee;
 }
-.leaderboard-table tr:nth-child(2) td {
+.top-table td {
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid #e4e8ee;
+}
+.top-table tr:nth-child(2) td {
   background: #fff9e2;
   color: #bd890b;
   font-weight: 700;
 }
-.leaderboard-table tr:not(:nth-child(2)) td {
+.top-table tr:not(:nth-child(2)) td {
   background: #f8fafc;
 }
 
 /* Таймер и победители */
-.timer {
-  text-align: center;
-  margin: 20px 0 10px;
-  font-size: 1.05em;
-}
-.winners {
-  text-align: center;
+.timer-block {
+  margin: 14px 0;
+  font-size: 1.02em;
   color: #7a7a7a;
-  margin-bottom: 15px;
+  text-align: center;
+}
+.timer {
+  font-weight: bold;
+  color: #145ba0;
+}
+.winners-block {
+  margin-top: 8px;
+  font-size: 1.02em;
+  color: #7a7a7a;
+  text-align: center;
 }
 
-/* Футер */
-.footer {
-  text-align: center;
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
+/* Футер (как у вас было) */
+.footer-main {
+  width: 100%;
+  margin-top: 36px;
+  background: #f7f7f7;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -1px 6px #0001;
+  padding: 18px 0 14px 0;
+  font-size: 1.04em;
   color: #789;
+  display: flex;
+  justify-content: center;
 }
-.footer-links {
-  margin-top: 8px;
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
 }
 .footer-links a {
   color: #145ba0;
   text-decoration: none;
-  margin: 0 8px;
+  margin: 0 4px;
+  font-weight: 600;
+  transition: color 0.13s;
 }
 .footer-links a:hover {
+  color: #e3b108;
   text-decoration: underline;
+}
+.footer-links span {
+  margin: 0 3px;
+  color: #aaa;
 }
 
 /* Адаптивность */
-@media (max-width: 600px) {
-  .nav-table td {
-    padding: 8px 3px;
-    font-size: 0.9em;
+@media (max-width: 800px) {
+  .menu-nav,
+  .top-wrap {
+    max-width: 97vw;
   }
-  .leaderboard-table {
+  .top-title { font-size: 1.13em; }
+}
+@media (max-width: 700px) {
+  .footer-content { flex-direction: column; gap: 8px; }
+  .top-table {
     max-width: 95%;
   }
 }
 </style>
 
-<!-- Навигация -->
-<table class="nav-table">
-  <tr>
-    <td><a href="/Beer-Syndicate/" class="nav-link">Главная</a></td>
-    <td><a href="/Beer-Syndicate/about" class="nav-link">О гильдии</a></td>
-    <td><a href="/Beer-Syndicate/members" class="nav-link">Состав</a></td>
-    <td><a href="/Beer-Syndicate/recruit" class="nav-link">Как вступить</a></td>
-    <td><a href="/Beer-Syndicate/contacts" class="nav-link">Контакты</a></td>
-  </tr>
-</table>
+<!-- Меню (как у вас было) -->
+<div class="menu-nav">
+  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+</div>
 
 <!-- Блок топа -->
-<div class="top-section">
-  <h2 class="section-title">Топ-5 по вкладу за неделю</h2>
-  <div class="update-time">Последнее обновление: 17.06.25 12:14</div>
+<div class="top-wrap">
+  <div class="top-title">Топ-5 по вкладу за неделю</div>
+  <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
   
-  <table class="leaderboard-table">
+  <table class="top-table">
     <tr>
       <th>Место</th>
       <th>Имя</th>
@@ -171,23 +205,27 @@ body {
     </tr>
   </table>
   
-  <div class="timer">
-    До сброса топа: <strong>4д 11ч 23м 32с</strong>
+  <div class="timer-block">
+    До сброса топа: <span class="timer">4д 11ч 13м 57с</span>
   </div>
-  <div class="winners">
+  <div class="winners-block">
     Победители прошлой недели: ---
   </div>
 </div>
 
 <!-- Футер -->
-<div class="footer">
-  <div>© 2025 Beer-Syndicate</div>
-  <div class="footer-links">
-    <a href="/Beer-Syndicate/contacts">Контакты</a>
-    <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
-    <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+<footer class="footer-main">
+  <div class="footer-content">
+    <span>© 2025 Beer-Syndicate</span>
+    <span class="footer-links">
+      <a href="/Beer-Syndicate/contacts">Контакты</a>
+      <span>|</span>
+      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+      <span>|</span>
+      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+    </span>
   </div>
-</div>
+</footer>
 
 <!-- Скрипт таймера -->
 <script>
@@ -208,7 +246,7 @@ body {
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    document.querySelector('.timer strong').textContent = 
+    document.querySelector('.timer').textContent = 
       `${days}д ${hours}ч ${minutes}м ${seconds}с`;
   }
   updateTimer();
