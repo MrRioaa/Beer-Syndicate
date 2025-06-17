@@ -2,177 +2,145 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Пивной Синдикат | ArcheAge Guild</title>
+  <title>Beer-Syndicate | ArcheAge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Официальный сайт гильдии Пивной Синдикат в ArcheAge. Новости, правила, топ-5 вкладчиков, контакты.">
-  <link rel="icon" href="https://archeage.ru/static/aa.mail.ru/img/main/favicon.ico" type="image/x-icon">
   <style>
     body {
       margin: 0;
-      background: linear-gradient(130deg, #e3f1ff 0%, #f4f6fa 80%, #fff8e2 100%);
+      background: linear-gradient(130deg, #e3f1ff 0%, #f4f6fa 85%, #fff8e2 100%);
       font-family: 'Segoe UI', 'Arial', sans-serif;
       color: #203040;
       min-height: 100vh;
     }
-    /* Меню */
     .menu-nav {
       display: flex;
       justify-content: center;
-      gap: 18px;
-      background: #f7f7f7;
-      padding: 18px 0 16px 0;
-      border-radius: 0 0 14px 14px;
-      box-shadow: 0 2px 8px #0001;
-      margin-bottom: 40px;
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-      z-index: 10;
-      position: relative;
+      gap: 16px;
+      background: transparent;
+      padding: 0;
+      margin-bottom: 38px;
+      border-bottom: 2px solid #e3f1ff;
+      box-shadow: none;
     }
     .menu-btn {
-      background: #fff;
-      color: #2d2d2d;
+      background: none;
+      color: #2373c4;
       font-weight: 600;
-      border-radius: 8px;
-      padding: 10px 26px;
+      border-radius: 6px 6px 0 0;
+      padding: 11px 24px 8px 24px;
       text-decoration: none;
-      transition: background 0.18s, box-shadow 0.18s, color 0.18s;
-      box-shadow: 0 2px 6px #0002;
-      border: 1px solid #ececec;
-      display: inline-block;
+      border: none;
+      box-shadow: none;
+      font-size: 1em;
+      transition: background 0.14s, color 0.13s;
     }
-    .menu-btn:hover, .menu-btn:focus {
-      background: #ffda73;
-      border-color: #f3c143;
-      color: #222;
-      outline: none;
-    }
-    .menu-btn.active {
+    .menu-btn:hover, .menu-btn.active {
       background: #e3f1ff;
-      border-color: #7dbdff;
       color: #145ba0;
     }
-
-    /* Основной контент */
     .main-content {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 36px;
-      max-width: 1120px;
+      gap: 32px;
+      max-width: 1060px;
       margin: 0 auto 0 auto;
       padding: 0 10px;
     }
     .news-list {
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      margin-top: 24px;
-      max-width: 720px;
+      gap: 21px;
+      margin-top: 22px;
+      max-width: 710px;
       min-width: 340px;
       flex: 2 2 0;
     }
     .news-card {
       background: #fff;
-      border-left: 6px solid #ffda73;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px #d0e7ff45;
-      padding: 18px 22px;
-      font-size: 1.09em;
-    }
-    .news-card.blue {
-      border-left: 6px solid #7dbdff;
+      border-left: 5px solid #7dbdff;
+      border-radius: 11px;
+      box-shadow: 0 2px 7px #d0e7ff45;
+      padding: 17px 22px 16px 22px;
+      font-size: 1.08em;
     }
     .news-title {
       font-weight: 700;
-      font-size: 1.18em;
+      font-size: 1.14em;
       color: #145ba0;
       margin-bottom: 7px;
     }
-
-    /* Баннер */
     .side-banner {
-      flex: 1 1 260px;
-      max-width: 295px;
-      min-width: 222px;
-      background: linear-gradient(150deg, #e3f1ff 80%, #fff0c0 100%);
-      border-radius: 18px;
-      box-shadow: 0 4px 16px #7dbdff22;
-      padding: 28px 20px 20px 20px;
-      margin-top: 44px;
-      text-align: center;
-      font-weight: 600;
-      color: #15598c;
-      font-size: 1.07em;
+      background: linear-gradient(145deg,#eaf4ff 90%,#e6f7ff 100%);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px #7dbdff22;
+      padding: 18px 14px 14px 14px;
+      max-width: 270px;
+      min-width: 180px;
+      color: #1974bb;
+      margin-top: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
+      font-size: 1em;
+    }
+    .side-banner .banner-title {
+      font-size: 1.12em;
+      margin-bottom: 7px;
+      color: #15598c;
+      font-weight: 700;
     }
     .side-banner a {
-      background: #ffda73;
-      color: #145ba0;
-      font-weight: 700;
-      border-radius: 8px;
-      padding: 8px 20px;
-      box-shadow: 0 2px 7px #ffe08a45;
+      background: #ffedb3;
+      color: #c1970c;
+      padding: 7px 14px;
+      font-size: 1em;
+      border-radius: 7px;
+      margin-top: 8px;
+      font-weight: 600;
       text-decoration: none;
-      font-size: 1.08em;
-      transition: background 0.13s, color 0.13s;
-      margin-top: 7px;
+      box-shadow: none;
+      border: 1px solid #ffe7a3;
+      transition: background 0.14s, color 0.13s;
     }
     .side-banner a:hover {
-      background: #ffe99a;
-      color: #bd890b;
+      background: #ffe08a;
+      color: #856400;
     }
-    @media (max-width: 1050px) {
-      .main-content { flex-direction: column; align-items: stretch; gap: 18px; }
-      .side-banner { margin-top: 0; max-width: 99vw; min-width: 0; }
-    }
-    @media (max-width: 800px) {
-      .menu-nav, .news-list { max-width: 97vw; }
-      .news-list { min-width: 0; }
-    }
-
-    /* H1 и подпись */
     h1 {
       text-align: center;
       font-weight: bold;
-      white-space:nowrap;
-      margin: 36px 0 10px 0;
-      color: #125ca8;
-      text-shadow: 0 2px 12px #e3f1ff;
-      font-size: 2.1em;
+      margin: 35px 0 8px 0;
+      color: #2373c4;
+      font-size: 2em;
+      letter-spacing: 0.01em;
     }
     .subtitle-main {
       text-align: center;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
       color: #4e708a;
-      font-size: 1.14em;
+      font-size: 1.12em;
     }
-
-    /* Подвал */
     .footer-main {
       width: 100%;
-      margin-top: 42px;
-      background: #f7f7f7;
-      border-radius: 18px 18px 0 0;
-      box-shadow: 0 -1px 6px #0001;
-      padding: 18px 0 14px 0;
-      font-size: 1.07em;
+      background: #f7f7fa;
+      border-top: 1.5px solid #e3f1ff;
+      border-radius: 0;
+      box-shadow: none;
+      margin-top: 46px;
+      font-size: 1em;
       color: #789;
       display: flex;
       justify-content: center;
+      padding: 15px 0 12px 0;
     }
     .footer-content {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      width: 98%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      width: 96%;
       gap: 7px;
     }
     .footer-links a {
@@ -190,13 +158,21 @@
       margin: 0 3px;
       color: #aaa;
     }
+    @media (max-width: 1050px) {
+      .main-content { flex-direction: column; align-items: stretch; gap: 15px; }
+      .side-banner { margin-top: 0; max-width: 97vw; min-width: 0; }
+    }
+    @media (max-width: 800px) {
+      .menu-nav, .news-list { max-width: 97vw; }
+      .news-list { min-width: 0; }
+    }
     @media (max-width: 700px) {
       .footer-content { flex-direction: column; gap: 8px; }
+      .main-content { gap: 6vw; }
     }
   </style>
 </head>
 <body>
-  <!-- Меню -->
   <nav class="menu-nav">
     <a href="/Beer-Syndicate/" class="menu-btn active">Главная</a>
     <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
@@ -204,26 +180,19 @@
     <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
     <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
   </nav>
-
   <h1>Добро пожаловать на сайт гильдии Пивной Синдикат ArcheAge!</h1>
   <div class="subtitle-main">
     Наша гильдия создана для комфортной и совместной игры!
   </div>
-
-  <!-- Две колонки: новости + баннер -->
   <div class="main-content">
-    <!-- Новости -->
     <section class="news-list">
-      <!-- Новость 1 -->
       <article class="news-card">
         <div class="news-title">17 июня 2025 — Открытие сайта гильдии!</div>
         <div style="margin-top: 4px;">
           Запущен официальный сайт нашей гильдии. Здесь будут публиковаться все актуальные новости, анонсы и события.
         </div>
       </article>
-
-      <!-- Новость 2 -->
-      <article class="news-card blue">
+      <article class="news-card">
         <div class="news-title">17 июня 2025 — Еженедельные выплаты за вклад в гильдию!</div>
         <div style="margin-top: 4px; font-size: 1.07em;">
           <b>💰 Еженедельные выплаты за вклад в гильдию</b><br>
@@ -237,36 +206,34 @@
             <li>Если у тебя <b>400 очков</b>, но ты 6-й в списке → не попадаешь в топ-5.</li>
           </ul>
           <span style="color:#e53935; font-weight:600;">📅 Считаем каждую субботу, выплаты — в воскресенье.</span>
-          <!-- Кнопка для перехода к топу -->
           <div style="margin-top:18px;">
             <a href="top" style="
-              display: inline-flex; align-items: center; gap: 8px;
-              background: linear-gradient(90deg,#ffe99a 60%,#ffda73 100%);
-              border-radius: 8px;
-              box-shadow: 0 2px 8px #ffe08a60;
-              color: #bd890b;
-              font-weight: 700;
-              padding: 8px 18px;
-              font-size: 1.07em;
+              display: inline-flex; align-items: center; gap: 7px;
+              background: #ffe99a;
+              border-radius: 7px;
+              color: #a0830b;
+              font-weight: 600;
+              padding: 7px 14px;
+              font-size: 1em;
               text-decoration: none;
-              transition: box-shadow 0.15s, background 0.15s;">
-              🏆 Смотреть текущий топ-5 недели
+              border: 1px solid #ffe7a3;
+              margin-top: 0;
+            ">
+              Смотреть текущий топ-5 недели
             </a>
           </div>
         </div>
       </article>
     </section>
-    <!-- Баннер справа -->
     <aside class="side-banner">
-      <span style="font-size:1.23em;">🏅 <b>Топ-5 недели</b></span>
+      <div class="banner-title">🏅 Топ-5 недели</div>
       <div style="font-size:0.98em; color:#267cff;">
-        <b>Кто лучший вкладчик?</b><br>
+        Кто лучший вкладчик?<br>
         Переходи к&nbsp;текущему рейтингу участников<br>— получи свою награду!
       </div>
       <a href="top">Перейти к ТОПу</a>
     </aside>
   </div>
-
   <footer class="footer-main">
     <div class="footer-content">
       <span>© 2025 Beer-Syndicate</span>
