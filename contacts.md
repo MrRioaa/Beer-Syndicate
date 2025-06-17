@@ -144,7 +144,7 @@
   <div class="leader-block">
     <div class="leader-title">Пивной Барон (Лидер гильдии)</div>
     <div class="leader-contacts">
-      <span><span class="leader-label">Ник:</span> <b>MrRioaa</b></span>
+      <span><span class="leader-label">Ник:</span> <b>СаняДробовик</b></span>
       <span><span class="leader-label">Telegram:</span>
         <a class="contacts-link" href="https://t.me/Mr_NN1" target="_blank">@Mr_NN1</a>
       </span>
