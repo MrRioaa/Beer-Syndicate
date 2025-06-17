@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Пивной Синдикат | ArcheAge</title>
+  <title>О гильдии | Пивной Синдикат</title>
   <style>
     :root {
       --beer-bg: #2b2116;
@@ -79,145 +79,121 @@
       color: var(--beer-panel);
       box-shadow: 0 2.5px 13px #ffde694a;
     }
-
-    .main-content {
-      max-width: 1150px;
-      margin: 0 auto 32px auto;
-      display: flex;
-      gap: 38px;
-      align-items: flex-start;
-    }
-    .about-panel {
-      background: #3b2e22;
-      border-radius: 28px;
-      box-shadow: 0 7px 38px #000a, 0 1.5px 7px #ffde6944;
-      padding: 40px 48px 42px 48px;
-      min-width: 530px;
-      flex: 1 1 0px;
-      color: #fff8e1;
-      border: 2.2px solid #ffde69;
-      position: relative;
-    }
-    .about-panel h1 {
-      color: #ffd366;
+    h1 {
+      text-align: center;
+      font-weight: bold;
       font-size: 2.2em;
-      font-weight: 900;
-      margin-top: 0;
-      margin-bottom: 12px;
-      line-height: 1.1;
+      margin: 15px 0 10px 0;
+      letter-spacing: 0.01em;
+      color: var(--beer-yellow);
+      text-shadow: 0 2px 12px #6e492380;
     }
-    .about-panel p, .about-panel li {
-      font-size: 1.13em;
-      color: #fff8e1;
+    .subtitle {
+      text-align: center;
+      margin-bottom: 22px;
+      font-size: 1.15em;
+      color: var(--beer-cream2);
     }
-    .about-panel ul {
-      margin-top: 0.8em;
-      margin-bottom: 1.2em;
-    }
-    .about-panel b, .about-panel strong {
-      color: #ffd366;
-      font-weight: 700;
-    }
-    .about-panel hr {
-      border: none;
-      border-top: 1.8px solid #574126;
-      margin: 2.1em 0 1.3em 0;
-    }
-    .about-panel .block-title {
-      font-size: 1.45em;
-      color: #ffd366;
-      margin-bottom: 0.6em;
+    .section-title {
+      font-size: 1.36em;
       font-weight: 800;
-      display: flex;
-      align-items: center;
-      gap: 0.32em;
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--beer-yellow2);
+      text-align: left;
+      letter-spacing: 0.01em;
+      padding-left: 4px;
+      text-shadow: 0 2px 7px #ffde693a;
     }
-    .about-panel .block-title span {
+    .content-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 36px;
+      margin-top: 2px;
+    }
+    .guild-info-list {
+      background: linear-gradient(110deg, #4c381c 70%, var(--beer-panel-light) 100%);
+      border-left: 7px solid var(--beer-yellow);
+      border-right: 1.5px solid var(--beer-brown-dark);
+      border-radius: 11px;
+      box-shadow: 0 1.5px 9px #000c;
+      padding: 18px 20px 16px 20px;
+      margin-bottom: 16px;
+      color: var(--beer-cream);
+      font-size: 1.12em;
+    }
+    .rules-block {
+      background: linear-gradient(110deg, #4c381c 70%, var(--beer-panel-light) 100%);
+      border-left: 7px solid var(--beer-orange);
+      border-right: 1.5px solid var(--beer-brown-dark);
+      border-radius: 11px;
+      box-shadow: 0 1.5px 9px #000c;
+      padding: 18px 20px 16px 20px;
+      margin-bottom: 4px;
+      color: var(--beer-cream);
       font-size: 1.13em;
     }
-    .about-panel .section-header {
-      margin-top: 1.8em;
-      font-size: 1.14em;
-      color: #ffd366;
-      font-weight: 700;
+    .rules-block ul {
+      margin-left: 1.2em;
+      margin-top: 7px;
+      margin-bottom: 7px;
     }
-    .about-panel .section-list {
-      margin: 0.45em 0 1.3em 0;
-      padding-left: 1.3em;
+    .rules-block ul li {
+      margin-bottom: 2.5px;
     }
-    /* Banner */
-    .about-banner {
-      min-width: 265px;
-      max-width: 300px;
-      background: linear-gradient(120deg,#3b2e22 60%,#ffde6933 100%);
-      border-radius: 19px;
-      box-shadow: 0 2px 16px #000a, 0 2px 12px #ffc34a33;
-      padding: 34px 20px 24px 20px;
+    .side-banner {
+      flex: 1 1 240px;
+      max-width: 290px;
+      min-width: 210px;
+      background: linear-gradient(120deg, #3b2e22 70%, #ffe3a322 100%);
+      border-radius: 14px;
+      box-shadow: 0 4px 22px #000a, 0 1.5px 7px #ffde691a;
+      padding: 23px 18px 17px 18px;
+      margin-top: 7px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--beer-yellow);
+      font-size: 1.07em;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border: 2px solid #ffde69;
-      color: #ffd366;
-      font-size: 1.18em;
+      gap: 16px;
+      border: 2px solid var(--beer-brown-dark);
+    }
+    .side-banner a {
+      background: linear-gradient(90deg, var(--beer-yellow2) 70%, var(--beer-yellow) 100%);
+      color: var(--beer-panel);
       font-weight: 700;
-      position: relative;
-      margin-top: 8px;
-      text-align: center;
-    }
-    .about-banner .banner-title {
-      color: #ffd366;
-      font-weight: 800;
-      font-size: 1.17em;
-      margin-bottom: 10px;
-    }
-    .about-banner .banner-btn {
-      background: linear-gradient(90deg,#ffe082 70%,#ffde69 100%);
-      color: #593a19;
-      font-weight: 800;
-      border-radius: 12px;
-      border: 2px solid #ffde69;
-      font-size: 1.11em;
-      padding: 12px 32px;
-      margin-top: 18px;
-      box-shadow: 0 2.5px 14px #ffc34a2a;
+      border-radius: 8px;
+      padding: 10px 20px;
+      box-shadow: 0 2px 12px #ffc34a45;
       text-decoration: none;
-      transition: background 0.13s, color 0.13s, border 0.13s;
-      display: inline-block;
+      transition: background 0.13s, color 0.13s, box-shadow 0.15s;
+      margin-top: 9px;
+      font-size: 1.07em;
+      border: 2px solid var(--beer-yellow);
     }
-    .about-banner .banner-btn:hover {
-      background: #ffde69;
-      color: #ad7408;
-      border-color: #ffde69;
-      box-shadow: 0 4px 18px #ffde697a;
-    }
-    @media (max-width: 1200px) {
-      .main-content { flex-direction: column; gap: 22px; }
-      .about-panel, .about-banner { max-width: 99vw; min-width: unset;}
-      .about-banner {margin-left:0;}
-    }
-    @media (max-width: 700px) {
-      .about-panel {padding: 16px 7vw 22px 7vw;}
-      .about-banner {padding: 18px 8vw;}
-      .main-content {gap:9vw;}
+    .side-banner a:hover {
+      background: linear-gradient(90deg, var(--beer-yellow) 60%, var(--beer-yellow2) 100%);
+      color: var(--beer-orange);
+      border-color: var(--beer-orange);
+      box-shadow: 0 4px 20px #ffc34a70;
     }
     footer.footer-main {
-      width: 100vw;
-      margin-top: 46px;
+      width: 100%;
+      margin-top: 40px;
       background: linear-gradient(90deg, #38280f 40%, #523813 100%);
       border-radius: 18px 18px 0 0;
-      box-shadow: 0 -1px 13px #000a;
-      padding: 22px 0 14px 0;
-      font-size: 1.12em;
-      color: #ffd366;
+      box-shadow: 0 -1px 15px #000a;
+      padding: 28px 0 20px 0;
+      font-size: 1.13em;
+      color: var(--beer-yellow2);
       display: flex;
       justify-content: center;
-      font-weight: 600;
-      border-top: 3px solid #ffde69;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
+      font-weight: 700;
+      border-top: 4px solid var(--beer-yellow2);
+      letter-spacing: 0.01em;
     }
     .footer-content {
       max-width: 850px;
@@ -229,81 +205,107 @@
       width: 96%;
     }
     .footer-links a {
-      color: #ffd366;
+      color: var(--beer-yellow);
       text-decoration: none;
-      margin: 0 4px;
-      font-weight: 600;
+      margin: 0 8px;
+      font-weight: 700;
       transition: color 0.13s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
     }
     .footer-links a:hover {
-      color: #ffde69;
-      text-decoration: underline;
+      color: var(--beer-orange);
+      border-bottom: 2px solid var(--beer-orange);
     }
     .footer-links span {
-      margin: 0 3px;
-      color: #bfa24c;
+      margin: 0 4px;
+      color: var(--beer-brown-dark);
+    }
+    @media (max-width: 1050px) {
+      .main-wrapper { max-width: 98vw; padding: 16px 5vw 12px 5vw; }
+      .content-row { flex-direction: column; align-items: stretch; gap: 18px; }
+      .side-banner { margin-top: 0; max-width: 98vw; min-width: 0; }
+    }
+    @media (max-width: 800px) {
+      .menu-nav, .guild-info-list { max-width: 98vw; }
+      .main-wrapper { padding: 5vw 1vw; }
     }
     @media (max-width: 700px) {
-      .footer-content { flex-direction: column; gap: 8px; }
+      .footer-content { flex-direction: column; gap: 10px; }
+      .main-wrapper { padding: 0 2vw; }
+      h1 { font-size: 1.1em; }
+      .section-title { font-size: 1em; }
     }
   </style>
 </head>
 <body>
-  <!-- Меню -->
-<nav class="menu-nav">
-  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
-  <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
-  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
-  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
-  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
-</nav>
-  <!-- Контент -->
-  <div class="main-content">
-    <div class="about-panel">
-      <h1>Добро пожаловать в «Пивной Синдикат»!</h1>
-      <p>Наша гильдия создана для комфортной и совместной игры:</p>
-      <ul>
-        <li>Свобода выбора</li>
-        <li>Занимайся тем, что нравится — <b>PVP</b>, <b>PVE</b>, фарм, крафт или просто общение внутри Ги</li>
-      </ul>
-      <p>Единственное, что мы требуем: <b>поддерживай товарищей, участвуй в жизни гильдии и делись опытом</b>.<br>
-        Заходи, комфортно устраивайся и отдыхай — <b>«Пивной Синдикат» рад каждому!</b>
-      </p>
-      <hr>
-      <div class="block-title"><span>📜</span>Правила «Пивного Синдиката»</div>
-      <div class="section-header">1️⃣ Основные принципы</div>
-      <ul class="section-list">
-        <li><b>Уважение —</b> токсичность, оскорбления, дискриминации или буллинг только в дружеском формате. Мы не ханжи, но и не быдло ебанное :3</li>
-        <li><b>Совместная игра —</b> помогаем друг другу, делимся ресурсами (по возможности) и знаниями.</li>
-        <li><b>Активность —</b> даже если вы заняты IRL, старайтесь иногда заходить в Discord/игру, чтобы гильдия не казалась «мертвой».</li>
-      </ul>
-      <div class="section-header">2️⃣ В игре</div>
-      <ul class="section-list">
-        <li><b>Гильд-ивенты —</b> участие в совместных мероприятиях приветствуется, но не строго обязательно.</li>
-        <li><b>Честность —</b> никакого скама, краж из общего склада или обмана согильдийцев.</li>
-        <li><b>Конфликты —</b> решаем мирно через офицеров/лидера, а не переходим на личности.</li>
-      </ul>
-      <div class="section-header">3️⃣ В Discord</div>
-      <b>Голосовые каналы:</b>
-      <ul class="section-list">
-        <li>Гостиная — Общение с новобранцами</li>
-        <li>Таверна — Общение на любые темы</li>
-        <li>Голосовой 1,2 — Общение по игре</li>
-        <li>КП 1,2 — Личные чаты</li>
-      </ul>
-      <b>Текстовые чаты:</b>
-      <ul class="section-list">
-        <li>Таверна — Общение на любые темы</li>
-        <li>КП 1,2 — Личные чаты</li>
-        <li>Общее — Спам помойка</li>
-      </ul>
-      <p style="color:#ff7c43"><b>NSFW-контент запрещён.</b></p>
+  <div class="main-wrapper">
+    <!-- Меню -->
+    <nav class="menu-nav">
+      <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+      <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
+      <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+      <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+      <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+    </nav>
+    <h1>О гильдии «Пивной Синдикат»</h1>
+    <div class="subtitle">
+      Наша гильдия создана для комфортной и совместной игры!
     </div>
-    <div class="about-banner">
-      <div class="banner-title">🏆 Текущий топ-5 вкладчиков недели</div>
-      <div>Кто лучший вкладчик?<br>
-      Переходи к текущему рейтингу участников — получи свою награду!</div>
-      <a href="/Beer-Syndicate/top" class="banner-btn">Перейти к ТОПу</a>
+    <div class="section-title">🍺 Описание</div>
+    <div class="content-row">
+      <!-- Описание и правила -->
+      <section style="flex:2 2 0;display:flex;flex-direction:column;gap:24px;">
+        <div class="guild-info-list">
+          <ul>
+            <li>Свобода выбора</li>
+            <li>Занимайся тем, что нравится — <b>PVP</b>, <b>PVE</b>, фарм, крафт или просто общение внутри Ги</li>
+          </ul>
+          <div style="margin-top:9px;">
+            Единственное, что мы требуем: <b>поддерживай товарищей, участвуй в жизни гильдии и делись опытом</b>.<br>
+            Заходи, комфортно устраивайся и отдыхай — <b>«Пивной Синдикат» рад каждому!</b>
+          </div>
+        </div>
+        <div class="section-title">📜 Правила «Пивного Синдиката»</div>
+        <div class="rules-block">
+          <b>1️⃣ Основные принципы:</b>
+          <ul>
+            <li><b>Уважение —</b> токсичность, оскорбления, дискриминации или буллинг только в дружеском формате. Мы не ханжи, но и не быдло ебанное :3</li>
+            <li><b>Совместная игра —</b> помогаем друг другу, делимся ресурсами (по возможности) и знаниями.</li>
+            <li><b>Активность —</b> даже если вы заняты IRL, старайтесь иногда заходить в Discord/игру, чтобы гильдия не казалась «мертвой».</li>
+          </ul>
+          <b>2️⃣ В игре:</b>
+          <ul>
+            <li><b>Гильд-ивенты —</b> участие в совместных мероприятиях приветствуется, но не строго обязательно.</li>
+            <li><b>Честность —</b> никакого скама, краж из общего склада или обмана согильдийцев.</li>
+            <li><b>Конфликты —</b> решаем мирно через офицеров/лидера, а не переходим на личности.</li>
+          </ul>
+          <b>3️⃣ В Discord:</b><br>
+          <b>Голосовые каналы:</b>
+          <ul>
+            <li>Гостиная — Общение с новобранцами</li>
+            <li>Таверна — Общение на любые темы</li>
+            <li>Голосовой 1,2 — Общение по игре</li>
+            <li>КП 1,2 — Личные чаты</li>
+          </ul>
+          <b>Текстовые чаты:</b>
+          <ul>
+            <li>Таверна — Общение на любые темы</li>
+            <li>КП 1,2 — Личные чаты</li>
+            <li>Общее — Спам помойка</li>
+          </ul>
+          <div style="margin-top:7px;color:#ff7c43"><b>NSFW-контент запрещён.</b></div>
+        </div>
+      </section>
+      <!-- Баннер справа -->
+      <aside class="side-banner">
+        <span style="font-size:1.23em;">🏅 ТОП-5 недели</span>
+        <div style="font-size:0.98em; color:var(--beer-yellow2);">
+          <b>Кто лучший вкладчик?</b><br>
+          Переходи к&nbsp;текущему рейтингу участников<br>— получи свою награду!
+        </div>
+        <a href="top">Перейти к ТОПу</a>
+      </aside>
     </div>
   </div>
   <footer class="footer-main">
