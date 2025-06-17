@@ -218,7 +218,14 @@
       </div>
       <div class="officers-title">Офицеры («Пивозавры»)</div>
       <div class="officer-list">
-        <span><span class="officer-label">Офицер 1:</span> <b>–</b></span>
+    <div class="officer-item">
+      <span class="officer-label">Офицер 1:</span>
+      <span class="officer-contacts">
+        <b>Нолемоций</b> | 
+        <a class="contacts-link" href="https://t.me/Leach_Ki" target="_blank">Telegram</a> | 
+        <b>Discord:</b> Zeremotions
+      </span>
+    </div>
         <span><span class="officer-label">Офицер 2:</span> <b>–</b></span>
         <span><span class="officer-label">Офицер 3:</span> <b>–</b></span>
         <span><span class="officer-label">Офицер 4:</span> <b>–</b></span>
