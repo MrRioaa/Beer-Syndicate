@@ -53,31 +53,34 @@
   text-align: center;
 }
 
-/* Таблица */
+/* таблица */
 .top-table {
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto 18px auto;
+  table-layout: fixed;
 }
+.top-table colgroup col:nth-child(1) { width: 25%; }
+.top-table colgroup col:nth-child(2) { width: 50%; }
+.top-table colgroup col:nth-child(3) { width: 25%; }
 .top-table th {
   background: #eaf4ff;
   color: #2979ff;
   font-weight: 700;
-  padding: 8px 12px;
-  text-align: center;
-}
-.top-table td {
-  padding: 8px 12px;
+  padding: 12px 15px;
   text-align: center;
   border: 1px solid #e4e8ee;
+}
+.top-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #e4e8ee;
+  background: #f8fafc;
 }
 .top-table tr:nth-child(2) td {
   background: #fff9e2;
   color: #bd890b;
   font-weight: 700;
-}
-.top-table tr:not(:nth-child(2)) td {
-  background: #f8fafc;
 }
 
 /* Таймер и победители */
@@ -140,6 +143,11 @@
   .menu-nav, .top-wrap {
     max-width: 95%;
   }
+  .top-table th, 
+  .top-table td {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
 }
 </style>
 
@@ -158,6 +166,11 @@
   <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
   
   <table class="top-table">
+    <colgroup>
+      <col>
+      <col>
+      <col>
+    </colgroup>
     <tr>
       <th>Место</th>
       <th>Имя</th>
@@ -212,7 +225,7 @@
   </div>
 </footer>
 
-<!-- таймер -->
+<!-- Таймер -->
 <script>
 function updateTimer() {
   const now = new Date();
