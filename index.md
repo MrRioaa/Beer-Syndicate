@@ -15,7 +15,7 @@
   border-radius: 8px;
   padding: 10px 26px;
   text-decoration: none;
-  transition: background 0.18s, box-shadow 0.18s;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
   box-shadow: 0 2px 6px #0002;
   border: 1px solid #ececec;
   display: inline-block;
@@ -23,11 +23,13 @@
 .menu-btn:hover, .menu-btn:focus {
   background: #ffda73;
   border-color: #f3c143;
+  color: #222;
   outline: none;
 }
 .menu-btn.active {
-  background: #ffda73;
-  border-color: #f3c143;
+  background: #e3f1ff;
+  border-color: #7dbdff;
+  color: #145ba0;
 }
 </style>
 
