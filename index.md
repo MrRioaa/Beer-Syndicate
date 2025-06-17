@@ -69,11 +69,11 @@
 
 <!-- Меню -->
 <div class="menu-nav">
-  <a href="index.md" class="menu-btn active">Главная</a>
-  <a href="about.md" class="menu-btn">О гильдии</a>
-  <a href="members.md" class="menu-btn">Состав</a>
-  <a href="recruit.md" class="menu-btn">Как вступить</a>
-  <a href="contacts.md" class="menu-btn">Контакты</a>
+  <a href="index.html" class="menu-btn">Главная</a>
+  <a href="about" class="menu-btn">О гильдии</a>
+  <a href="members" class="menu-btn">Состав</a>
+  <a href="recruit" class="menu-btn">Как вступить</a>
+  <a href="contacts" class="menu-btn">Контакты</a>
 </div>
 
 <h1 style="text-align:center; font-weight: bold; white-space:nowrap;">
