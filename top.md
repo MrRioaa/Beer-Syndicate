@@ -1,5 +1,5 @@
 <style>
-/* Стили меню (как в оригинале) */
+/* Стили меню */
 .menu-nav {
   display: flex; 
   justify-content: center; 
@@ -29,7 +29,7 @@
   border-color: #f3c143;
 }
 
-/* Блок топа (как в оригинале) */
+/* Блок топа */
 .top-wrap {
   max-width: 600px;
   margin: 0 auto 48px auto;
@@ -53,7 +53,7 @@
   text-align: center;
 }
 
-/* Таблица (исправленное выравнивание) */
+/* Таблица */
 .top-table {
   width: 100%;
   border-collapse: collapse;
@@ -98,7 +98,7 @@
   text-align: center;
 }
 
-/* Футер (как в оригинале) */
+/* Футер */
 .footer-main {
   width: 100%;
   margin-top: 36px;
@@ -143,7 +143,7 @@
 }
 </style>
 
-<!-- Меню (рабочие) -->
+<!-- Меню -->
 <div class="menu-nav">
   <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
   <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
@@ -212,7 +212,7 @@
   </div>
 </footer>
 
-<!-- Исправленный скрипт таймера -->
+<!-- таймер -->
 <script>
 function updateTimer() {
   const now = new Date();
