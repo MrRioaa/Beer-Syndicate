@@ -69,7 +69,7 @@
 
 <!-- Меню -->
 <div class="menu-nav">
-  <a href="index" class="menu-btn">Главная</a>
+  <a href="index" class="menu-btn active">Главная</a>
   <a href="about" class="menu-btn">О гильдии</a>
   <a href="members" class="menu-btn">Состав</a>
   <a href="recruit" class="menu-btn">Как вступить</a>
