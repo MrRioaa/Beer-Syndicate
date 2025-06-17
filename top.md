@@ -87,10 +87,21 @@
 .top-table td {
   font-size: 1.05em;
 }
-.top-winners {
-  margin-top: 14px;
+.timer-block {
+  margin: 14px 0;
   font-size: 1.02em;
   color: #7a7a7a;
+  text-align: center;
+}
+.timer {
+  font-weight: bold;
+  color: #145ba0;
+}
+.winners-block {
+  margin-top: 8px;
+  font-size: 1.02em;
+  color: #7a7a7a;
+  text-align: center;
 }
 @media (max-width: 800px) {
   .menu-nav,
@@ -152,7 +163,7 @@
 <!-- Блок топа -->
 <div class="top-wrap">
   <div class="top-title">Топ-5 по вкладу за неделю</div>
-  <div class="top-update">Последнее обновление: 17.06.25 6:00</div>
+  <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
   <table class="top-table">
     <tr>
       <th>Место</th>
@@ -185,8 +196,13 @@
       <td>30</td>
     </tr>
   </table>
-  <div class="top-winners">
-    Победители прошлой недели: ----------
+  
+  <!-- Таймер и победители -->
+  <div class="timer-block">
+    До сброса топа: <span class="timer">4д 11ч 44м 32с</span>
+  </div>
+  <div class="winners-block">
+    Победители прошлой недели: ---
   </div>
 </div>
 
@@ -207,21 +223,8 @@
 <!-- Скрипт таймера -->
 <script>
   function updateTimer() {
-    const now = new Date();
-    const updateDate = document.querySelector('.top-update');
-    
-    // Автоматическое обновление даты
-    const formattedDate = now.toLocaleString('ru-RU', {
-      day: '2-digit',
-      month: '2-digit',
-      year: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit'
-    }).replace(/,/, '');
-    
-    updateDate.textContent = `Последнее обновление: ${formattedDate}`;
-
     // Вычисляем время до следующей субботы 23:59
+    const now = new Date();
     const nextSaturday = new Date();
     const daysUntilSaturday = (6 - now.getDay() + 7) % 7; // 6 = суббота
     nextSaturday.setDate(now.getDate() + daysUntilSaturday);
@@ -236,17 +239,18 @@
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
     // Обновляем таймер
-    const timerElement = document.querySelector('.top-winners');
+    const timerElement = document.querySelector('.timer');
     if (diff > 0) {
-      timerElement.innerHTML = `До сброса топа: <b>${days}д ${hours}ч ${minutes}м</b> | Победители прошлой недели: ----------`;
+      timerElement.textContent = `${days}д ${hours}ч ${minutes}м ${seconds}с`;
     } else {
-      timerElement.innerHTML = `Топ сброшен! Обновите данные. | Победители прошлой недели: ----------`;
+      timerElement.textContent = "Топ сброшен!";
     }
   }
 
-  // Запускаем таймер сразу и обновляем каждую минуту
+  // Запускаем таймер сразу и обновляем каждую секунду
   updateTimer();
-  setInterval(updateTimer, 60000);
+  setInterval(updateTimer, 1000);
 </script>
