@@ -57,7 +57,7 @@
 .top-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 10 auto 18px auto;
+  margin: 0 auto 18px auto;
 }
 .top-table th {
   background: #eaf4ff;
@@ -237,7 +237,6 @@ function updateTimer() {
     `${days}д ${hours}ч ${minutes}м ${seconds}с`;
 }
 
-// Запускаем сразу и каждую секунду
 updateTimer();
 setInterval(updateTimer, 1000);
 </script>
