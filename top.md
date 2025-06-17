@@ -43,12 +43,21 @@
   box-shadow: 0 2px 12px #0001;
   padding: 32px 28px 28px 28px;
   font-size: 1.13em;
+  position: relative;
 }
 .top-title {
   font-size: 1.5em;
   font-weight: 700;
   color: #145ba0;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.top-update {
+  color: #888;
+  font-size: 0.97em;
+  margin-bottom: 8px;
+  text-align: left;
+  margin-left: 2px;
 }
 .top-table {
   width: 100%;
@@ -61,7 +70,6 @@
   font-weight: 700;
   font-size: 1em;
   padding: 8px 0;
-  border-radius: 6px 6px 0 0;
 }
 .top-table th,
 .top-table td {
@@ -76,21 +84,18 @@
 }
 .top-table tr:not(:nth-child(2)) td {
   background: #f8fafc;
+  color: #222;
+  font-weight: 400;
 }
 .top-table td {
   font-size: 1.05em;
-}
-.top-update {
-  color: #888;
-  font-size: 0.97em;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  text-align: right;
 }
 .top-winners {
   margin-top: 14px;
   font-size: 1.02em;
   color: #7a7a7a;
+  text-align: left;
+  margin-left: 2px;
 }
 @media (max-width: 800px) {
   .menu-nav,
@@ -122,7 +127,7 @@
     </tr>
     <tr>
       <td>1</td>
-      <td>Сандядробовик</td>
+      <td>Санядробовик</td>
       <td>160</td>
     </tr>
     <tr>
