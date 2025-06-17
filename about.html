@@ -13,48 +13,62 @@
       min-height: 100vh;
     }
     .menu-nav-float {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 22px;
-      background: #2b2116;
-      border-radius: 24px;
-      box-shadow: 0 8px 36px #000b, 0 1.5px 6px #ffde6930;
-      padding: 18px 38px;
-      margin: 36px auto 38px auto;
-      border: 2.2px solid #ffde69;
-      max-width: 890px;
-    }
-    .menu-btn-float {
-      background: #ffecb3;
-      color: #2b2116;
-      font-weight: 700;
-      border-radius: 13px;
-      padding: 13px 36px;
-      text-decoration: none;
-      font-size: 1.18em;
-      transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
-      box-shadow: 0 2.5px 14px #ffc34a2a;
-      border: 2px solid transparent;
-      outline: none;
-      cursor: pointer;
-      position: relative;
-      top: 0;
-    }
-    .menu-btn-float:hover, .menu-btn-float:focus {
-      background: #ffde69;
-      color: #6e4923;
-      border-color: #ffde69;
-      box-shadow: 0 5px 22px #ffde6975;
-      transform: translateY(-2px) scale(1.045);
-      z-index: 2;
-    }
-    .menu-btn-float.active {
-      background: linear-gradient(95deg,#ffe082 65%,#ffde69 100%);
-      border-color: #ffde69;
-      color: #6e4923;
-      box-shadow: 0 3.5px 24px #ffde694a;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  background: #2b2116;
+  border-radius: 28px;
+  box-shadow: 0 8px 36px #000c, 0 2px 8px #ffde6920;
+  padding: 24px 32px 24px 32px;
+  border: 3px solid #ffde69;
+  max-width: 970px;
+  margin: 42px auto 44px auto;
+}
+.menu-btn-float {
+  background: #fff3bc;
+  color: #2b2116;
+  font-weight: 700;
+  border-radius: 16px;
+  padding: 20px 48px;
+  text-decoration: none;
+  font-size: 1.33em;
+  transition: background 0.15s, box-shadow 0.15s, color 0.12s, transform 0.1s;
+  box-shadow: 0 3px 18px #ffc34a20;
+  border: 2.5px solid transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  min-width: 146px;
+  justify-content: center;
+  text-align: center;
+}
+.menu-btn-float:hover, .menu-btn-float:focus {
+  background: #ffec79;
+  color: #6e4923;
+  border-color: #ffde69;
+  box-shadow: 0 6px 22px #ffde6990;
+  transform: translateY(-2px) scale(1.05);
+  z-index: 2;
+}
+.menu-btn-float.active {
+  background: linear-gradient(97deg,#ffe082 75%,#ffde69 100%);
+  border-color: #ffde69;
+  color: #6e4923;
+  box-shadow: 0 4.5px 26px #ffde6965;
+  outline: none;
+}
+@media (max-width: 1100px) {
+  .menu-nav-float {gap:16px;padding:14px 6vw;}
+  .menu-btn-float {padding:15px 3vw;min-width:90px;font-size:1.09em;}
+}
+@media (max-width: 600px) {
+  .menu-nav-float {flex-direction:column;gap:10px;padding:10px 2vw;}
+  .menu-btn-float {padding:12px 5vw;min-width:unset;width:95vw;}
+}
     .main-content {
       max-width: 1150px;
       margin: 0 auto 32px auto;
@@ -225,15 +239,13 @@
 </head>
 <body>
   <!-- Меню -->
-  <div style="display:flex;justify-content:center;margin:36px 0 38px 0;">
-    <nav class="menu-nav-float">
-      <a href="/Beer-Syndicate/" class="menu-btn-float">Главная</a>
-      <a href="/Beer-Syndicate/about" class="menu-btn-float active">О гильдии</a>
-      <a href="/Beer-Syndicate/members" class="menu-btn-float">Состав</a>
-      <a href="/Beer-Syndicate/recruit" class="menu-btn-float">Как вступить</a>
-      <a href="/Beer-Syndicate/contacts" class="menu-btn-float">Контакты</a>
-    </nav>
-  </div>
+<div class="menu-nav-float">
+  <a href="/Beer-Syndicate/" class="menu-btn-float">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn-float active">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn-float">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn-float">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn-float">Контакты</a>
+</div>
   <!-- Контент -->
   <div class="main-content">
     <div class="about-panel">
