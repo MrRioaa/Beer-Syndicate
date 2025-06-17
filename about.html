@@ -12,63 +12,62 @@
       color: #fff8e1;
       min-height: 100vh;
     }
-    .menu-nav-float {
+   .menu-nav-float {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 38px;
+  gap: 26px;
   background: #2b2116;
-  border-radius: 28px;
-  box-shadow: 0 8px 36px #000c, 0 2px 8px #ffde6920;
-  padding: 24px 32px 24px 32px;
-  border: 3px solid #ffde69;
-  max-width: 970px;
-  margin: 42px auto 44px auto;
+  border-radius: 24px;
+  box-shadow: 0 8px 36px #000c, 0 2px 8px #ffde6930;
+  padding: 18px 38px;
+  border: 2.2px solid #ffde69;
+  max-width: 890px;
+  margin: 38px auto 44px auto;
 }
 .menu-btn-float {
   background: #fff3bc;
   color: #2b2116;
   font-weight: 700;
-  border-radius: 16px;
-  padding: 20px 48px;
+  border-radius: 13px;
+  padding: 13px 36px;
   text-decoration: none;
-  font-size: 1.33em;
-  transition: background 0.15s, box-shadow 0.15s, color 0.12s, transform 0.1s;
-  box-shadow: 0 3px 18px #ffc34a20;
-  border: 2.5px solid transparent;
+  font-size: 1.18em;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
+  box-shadow: 0 2.5px 14px #ffc34a2a;
+  border: 2px solid transparent;
   outline: none;
   cursor: pointer;
-  position: relative;
-  top: 0;
   display: flex;
   align-items: center;
-  min-width: 146px;
   justify-content: center;
+  min-width: 132px;
   text-align: center;
 }
 .menu-btn-float:hover, .menu-btn-float:focus {
-  background: #ffec79;
+  background: #ffde69;
   color: #6e4923;
   border-color: #ffde69;
-  box-shadow: 0 6px 22px #ffde6990;
-  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 22px #ffde6975;
+  transform: translateY(-2px) scale(1.045);
   z-index: 2;
 }
 .menu-btn-float.active {
-  background: linear-gradient(97deg,#ffe082 75%,#ffde69 100%);
+  background: linear-gradient(95deg,#ffe082 65%,#ffde69 100%);
   border-color: #ffde69;
   color: #6e4923;
-  box-shadow: 0 4.5px 26px #ffde6965;
+  box-shadow: 0 3.5px 24px #ffde694a;
   outline: none;
 }
 @media (max-width: 1100px) {
-  .menu-nav-float {gap:16px;padding:14px 6vw;}
-  .menu-btn-float {padding:15px 3vw;min-width:90px;font-size:1.09em;}
+  .menu-nav-float {gap:14px;padding:12px 3vw;}
+  .menu-btn-float {padding:9px 2vw;min-width:80px;font-size:1em;}
 }
 @media (max-width: 600px) {
-  .menu-nav-float {flex-direction:column;gap:10px;padding:10px 2vw;}
-  .menu-btn-float {padding:12px 5vw;min-width:unset;width:95vw;}
+  .menu-nav-float {flex-direction:column;gap:8px;padding:7px 2vw;}
+  .menu-btn-float {padding:10px 6vw;min-width:unset;width:95vw;}
 }
+
     .main-content {
       max-width: 1150px;
       margin: 0 auto 32px auto;
