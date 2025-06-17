@@ -68,42 +68,36 @@
       <th>Место</th>
       <th>Имя</th>
       <th>Вклад (неделя)</th>
-      <th>Статус</th>
     </tr>
     <tr class="gold">
       <td>1</td>
       <td>Санядробовик</td>
       <td>160</td>
-      <td>В игре</td>
     </tr>
     <tr>
       <td>2</td>
       <td>Ksioniks</td>
       <td>50</td>
-      <td>В игре</td>
     </tr>
     <tr>
       <td>3</td>
       <td>Thxfordrugs</td>
       <td>80</td>
-      <td>В игре</td>
     </tr>
     <tr>
       <td>4</td>
       <td>Солевичек</td>
       <td>30</td>
-      <td>7 ч. назад</td>
     </tr>
     <tr>
       <td>5</td>
       <td>Лолечка</td>
       <td>30</td>
-      <td>11 ч. назад</td>
     </tr>
   </table>
 
   <div class="top5-prev">
-    <b>Победители прошлой недели:</b>  
-    1. Ksioniks, 2. Санядробовик, 3. Thxfordrugs, 4. Лолечка, 5. Солевичек
+    <b>Победители 1 недели:</b>  
+    ----------
   </div>
 </div>
