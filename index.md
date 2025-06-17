@@ -67,7 +67,9 @@
   <a href="contacts.md" class="menu-btn">Контакты</a>
 </div>
 
-# Добро пожаловать на сайт гильдии Пивной Синидикат ArcheAge!
+# <h1 style="text-align:center; font-weight: bold; white-space:nowrap;">
+  Добро пожаловать на сайт гильдии Пивной Синдикат ArcheAge!
+</h1>
 
 Наша гильдия создана для комфортной и совместной игры!
 
