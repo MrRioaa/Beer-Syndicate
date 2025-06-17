@@ -55,19 +55,20 @@
   color: #888;
   font-size: 0.97em;
   margin-bottom: 18px;
-  text-align: left;
+  text-align: center; /* Центрируем дату обновления */
 }
 .top-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 18px;
+  margin: 0 auto 18px auto; /* Центрируем таблицу */
+  max-width: 90%; /* Добавляем отступы по бокам */
 }
 .top-table th {
   background: #eaf4ff;
   color: #2979ff;
   font-weight: 700;
   font-size: 1em;
-  padding: 8px 0;
+  padding: 8px 12px; /* Добавляем отступы для заголовков */
   border-radius: 6px 6px 0 0;
 }
 .top-table th,
@@ -83,9 +84,6 @@
 }
 .top-table tr:not(:nth-child(2)) td {
   background: #f8fafc;
-}
-.top-table td {
-  font-size: 1.05em;
 }
 .timer-block {
   margin: 14px 0;
@@ -109,6 +107,9 @@
     max-width: 97vw;
   }
   .top-title { font-size: 1.13em; }
+  .top-table {
+    max-width: 95%; /* Увеличиваем на мобильных */
+  }
 }
 .footer-main {
   width: 100%;
@@ -163,7 +164,7 @@
 <!-- Блок топа -->
 <div class="top-wrap">
   <div class="top-title">Топ-5 по вкладу за неделю</div>
-  <div class="top-update">Последнее обновление: 17.06.25 6:30</div>
+  <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
   <table class="top-table">
     <tr>
       <th>Место</th>
@@ -199,7 +200,7 @@
   
   <!-- Таймер и победители -->
   <div class="timer-block">
-    До сброса топа: <span class="timer">4д 11ч 44м 32с</span>
+    До сброса топа: <span class="timer">4д 11ч 36м 1с</span>
   </div>
   <div class="winners-block">
     Победители прошлой недели: ---
