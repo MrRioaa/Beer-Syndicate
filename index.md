@@ -69,11 +69,11 @@
 
 <!-- Меню -->
 <div class="menu-nav">
-  <a href="index" class="menu-btn active">Главная</a>
-  <a href="about" class="menu-btn">О гильдии</a>
-  <a href="members" class="menu-btn">Состав</a>
-  <a href="recruit" class="menu-btn">Как вступить</a>
-  <a href="contacts" class="menu-btn">Контакты</a>
+  <a href="/Beer-Syndicate/" class="menu-btn active">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
 </div>
 
 <h1 style="text-align:center; font-weight: bold; white-space:nowrap;">
