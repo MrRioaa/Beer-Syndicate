@@ -163,7 +163,7 @@
 <!-- Блок топа -->
 <div class="top-wrap">
   <div class="top-title">Топ-5 по вкладу за неделю</div>
-  <div class="top-update">Последнее обновление: 17.06.25 12:14</div>
+  <div class="top-update">Последнее обновление: 17.06.25 6:30</div>
   <table class="top-table">
     <tr>
       <th>Место</th>
@@ -177,13 +177,13 @@
     </tr>
     <tr>
       <td>2</td>
-      <td>Ksioniks</td>
-      <td>50</td>
+      <td>Thxfordrugs</td>
+      <td>80</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Thxfordrugs</td>
-      <td>80</td>
+      <td>Ksioniks</td>
+      <td>50</td>
     </tr>
     <tr>
       <td>4</td>
