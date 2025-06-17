@@ -12,52 +12,47 @@
       color: #fff8e1;
       min-height: 100vh;
     }
-   .menu-nav-float {
+   .menu-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 26px;
-  background: #2b2116;
-  border-radius: 24px;
-  box-shadow: 0 8px 36px #000c, 0 2px 8px #ffde6930;
-  padding: 18px 38px;
-  border: 2.2px solid #ffde69;
-  max-width: 890px;
-  margin: 38px auto 44px auto;
+  gap: 22px;
+  background: var(--beer-panel);
+  border-radius: 18px;
+  box-shadow: 0 3px 16px #000a, 0 1.5px 4px #ffde6930;
+  padding: 14px 0;
+  margin-bottom: 32px;
+  border: 2px solid var(--beer-brown);
 }
-.menu-btn-float {
-  background: #fff3bc;
-  color: #2b2116;
+.menu-btn {
+  background: var(--beer-cream2);
+  color: var(--beer-panel);
   font-weight: 700;
-  border-radius: 13px;
-  padding: 13px 36px;
+  border-radius: 10px;
+  padding: 10px 26px;
   text-decoration: none;
-  font-size: 1.18em;
+  font-size: 1.08em;
   transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
-  box-shadow: 0 2.5px 14px #ffc34a2a;
+  box-shadow: 0 1.5px 7px #ffc34a1c;
   border: 2px solid transparent;
   outline: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 132px;
-  text-align: center;
+  position: relative;
+  top: 0;
 }
-.menu-btn-float:hover, .menu-btn-float:focus {
-  background: #ffde69;
-  color: #6e4923;
-  border-color: #ffde69;
-  box-shadow: 0 5px 22px #ffde6975;
-  transform: translateY(-2px) scale(1.045);
+.menu-btn:hover, .menu-btn:focus {
+  background: var(--beer-yellow);
+  color: var(--beer-panel);
+  border-color: var(--beer-orange);
+  box-shadow: 0 2.5px 18px #ffde6933;
+  transform: translateY(-2px) scale(1.04);
   z-index: 2;
 }
-.menu-btn-float.active {
-  background: linear-gradient(95deg,#ffe082 65%,#ffde69 100%);
-  border-color: #ffde69;
-  color: #6e4923;
-  box-shadow: 0 3.5px 24px #ffde694a;
-  outline: none;
+.menu-btn.active {
+  background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
+  border-color: var(--beer-orange);
+  color: var(--beer-panel);
+  box-shadow: 0 2.5px 13px #ffde694a;
 }
 @media (max-width: 1100px) {
   .menu-nav-float {gap:14px;padding:12px 3vw;}
@@ -238,13 +233,13 @@
 </head>
 <body>
   <!-- Меню -->
-<div class="menu-nav-float">
-  <a href="/Beer-Syndicate/" class="menu-btn-float">Главная</a>
-  <a href="/Beer-Syndicate/about" class="menu-btn-float active">О гильдии</a>
-  <a href="/Beer-Syndicate/members" class="menu-btn-float">Состав</a>
-  <a href="/Beer-Syndicate/recruit" class="menu-btn-float">Как вступить</a>
-  <a href="/Beer-Syndicate/contacts" class="menu-btn-float">Контакты</a>
-</div>
+<nav class="menu-nav">
+  <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+  <a href="/Beer-Syndicate/about" class="menu-btn active">О гильдии</a>
+  <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+  <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+  <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+</nav>
   <!-- Контент -->
   <div class="main-content">
     <div class="about-panel">
