@@ -2,211 +2,192 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>О гильдии | Пивной Синдикат</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --beer-bg: #2b2116;
-      --beer-panel: #3b2e22;
-      --beer-panel-light: #53422d;
-      --beer-cream: #fff8e1;
-      --beer-cream2: #ffe3a3;
-      --beer-yellow: #FFDE69;
-      --beer-yellow2: #FFC34A;
-      --beer-orange: #FFA941;
-      --beer-brown: #A87536;
-      --beer-brown-dark: #6e4923;
-      --beer-border: #6e4923;
-      --beer-shadow: #0008;
-    }
     body {
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: var(--beer-bg);
+      background: #2b2116;
       margin: 0;
-      padding: 0;
-      color: var(--beer-cream);
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      color: #fff8e1;
       min-height: 100vh;
     }
-    .main-wrapper {
-      max-width: 980px;
-      margin: 38px auto 0 auto;
-      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+    .menu-nav-float {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      background: #2b2116;
       border-radius: 24px;
       box-shadow: 0 8px 36px #000b, 0 1.5px 6px #ffde6930;
-      padding: 32px 28px 22px 28px;
-      border: 1.5px solid var(--beer-border);
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      gap: 36px;
-      min-height: 600px;
+      padding: 18px 38px;
+      margin: 36px auto 38px auto;
+      border: 2.2px solid #ffde69;
+      max-width: 890px;
     }
-    .menu-nav-float {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  background: #2b2116;
-  border-radius: 24px;
-  box-shadow: 0 8px 36px #000b, 0 1.5px 6px #ffde6930;
-  padding: 18px 38px;
-  margin: 0 auto;
-  border: 2.2px solid #ffde69;
-  max-width: 890px;
-}
-.menu-btn-float {
-  background: #ffecb3;
-  color: #2b2116;
-  font-weight: 700;
-  border-radius: 13px;
-  padding: 13px 36px;
-  text-decoration: none;
-  font-size: 1.18em;
-  transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
-  box-shadow: 0 2.5px 14px #ffc34a2a;
-  border: 2px solid transparent;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  top: 0;
-}
-.menu-btn-float:hover, .menu-btn-float:focus {
-  background: #ffde69;
-  color: #6e4923;
-  border-color: #ffde69;
-  box-shadow: 0 5px 22px #ffde6975;
-  transform: translateY(-2px) scale(1.045);
-  z-index: 2;
-}
-.menu-btn-float.active, .menu-btn-float[aria-current="page"] {
-  background: linear-gradient(95deg,#ffe082 65%,#ffde69 100%);
-  border-color: #ffde69;
-  color: #6e4923;
-  box-shadow: 0 3.5px 24px #ffde694a;
-}
-    .about-content {
-      width: 700px;
-      background: var(--beer-panel-light);
-      border-radius: 18px;
-      box-shadow: 0 2px 12px #0005;
-      padding: 38px 34px 36px 34px;
-      font-size: 1.13em;
-      color: var(--beer-cream);
-      border: 2px solid var(--beer-border);
-      margin: 0 auto 0 0;
-      position: relative;
-    }
-    .about-content h2 {
-      margin-top: 0.5em;
-      color: var(--beer-yellow);
-      font-size: 1.38em;
-      text-shadow: 0 2px 6px #0008;
-    }
-    .about-list {
-      margin: 0.5em 0 1.5em 0;
-      padding-left: 1.2em;
-    }
-    .about-rule-title {
+    .menu-btn-float {
+      background: #ffecb3;
+      color: #2b2116;
       font-weight: 700;
-      font-size: 1.12em;
-      margin: 1.7em 0 0.3em 0;
-      color: var(--beer-orange);
-      text-shadow: 0 2px 6px #0005;
+      border-radius: 13px;
+      padding: 13px 36px;
+      text-decoration: none;
+      font-size: 1.18em;
+      transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
+      box-shadow: 0 2.5px 14px #ffc34a2a;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      top: 0;
     }
-    .rule-list {
-      margin: 0.6em 0 0.7em 0;
+    .menu-btn-float:hover, .menu-btn-float:focus {
+      background: #ffde69;
+      color: #6e4923;
+      border-color: #ffde69;
+      box-shadow: 0 5px 22px #ffde6975;
+      transform: translateY(-2px) scale(1.045);
+      z-index: 2;
+    }
+    .menu-btn-float.active {
+      background: linear-gradient(95deg,#ffe082 65%,#ffde69 100%);
+      border-color: #ffde69;
+      color: #6e4923;
+      box-shadow: 0 3.5px 24px #ffde694a;
+    }
+    .main-content {
+      max-width: 1150px;
+      margin: 0 auto 32px auto;
+      display: flex;
+      gap: 38px;
+      align-items: flex-start;
+    }
+    .about-panel {
+      background: #3b2e22;
+      border-radius: 28px;
+      box-shadow: 0 7px 38px #000a, 0 1.5px 7px #ffde6944;
+      padding: 40px 48px 42px 48px;
+      min-width: 530px;
+      flex: 1 1 0px;
+      color: #fff8e1;
+      border: 2.2px solid #ffde69;
+      position: relative;
+    }
+    .about-panel h1 {
+      color: #ffd366;
+      font-size: 2.2em;
+      font-weight: 900;
+      margin-top: 0;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .about-panel p, .about-panel li {
+      font-size: 1.13em;
+      color: #fff8e1;
+    }
+    .about-panel ul {
+      margin-top: 0.8em;
+      margin-bottom: 1.2em;
+    }
+    .about-panel b, .about-panel strong {
+      color: #ffd366;
+      font-weight: 700;
+    }
+    .about-panel hr {
+      border: none;
+      border-top: 1.8px solid #574126;
+      margin: 2.1em 0 1.3em 0;
+    }
+    .about-panel .block-title {
+      font-size: 1.45em;
+      color: #ffd366;
+      margin-bottom: 0.6em;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.32em;
+    }
+    .about-panel .block-title span {
+      font-size: 1.13em;
+    }
+    .about-panel .section-header {
+      margin-top: 1.8em;
+      font-size: 1.14em;
+      color: #ffd366;
+      font-weight: 700;
+    }
+    .about-panel .section-list {
+      margin: 0.45em 0 1.3em 0;
       padding-left: 1.3em;
     }
-    .rule-list li {
-      margin-bottom: 0.35em;
-    }
-    .rule-label {
-      font-weight: 600;
-      color: var(--beer-yellow);
-    }
-    .rule-num {
-      font-weight: 700;
-      color: var(--beer-yellow2);
-      margin-right: 7px;
-    }
-    hr {
-      border: none;
-      border-top: 2px solid var(--beer-yellow2);
-      background: none;
-      margin: 2em 0 1.2em 0;
-      opacity: 0.3;
-    }
-    /* Баннер справа */
+    /* Banner */
     .about-banner {
-      min-width: 235px;
-      max-width: 270px;
-      width: 245px;
-      position: static;
-      background: linear-gradient(90deg,#4c381c 60%,#ffde6933 100%);
-      border-radius: 14px;
-      box-shadow: 0 2px 12px #000a, 0 2px 12px #ffc34a33;
-      color: var(--beer-yellow2);
-      font-weight: 700;
-      font-size: 1.09em;
-      padding: 26px 20px 20px 22px;
+      min-width: 265px;
+      max-width: 300px;
+      background: linear-gradient(120deg,#3b2e22 60%,#ffde6933 100%);
+      border-radius: 19px;
+      box-shadow: 0 2px 16px #000a, 0 2px 12px #ffc34a33;
+      padding: 34px 20px 24px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
-      text-align: center;
-      transition: box-shadow 0.15s, background 0.15s;
-      border: 2px solid var(--beer-brown);
-      z-index: 3;
-      margin-left: 0;
-      margin-top: 12px;
-      height: fit-content;
-      align-self: flex-start;
-    }
-    .about-banner a {
-      color: var(--beer-yellow);
-      text-decoration: none;
+      border: 2px solid #ffde69;
+      color: #ffd366;
+      font-size: 1.18em;
       font-weight: 700;
-      transition: color 0.18s;
-      border-bottom: 2px dashed var(--beer-orange);
-      padding-bottom: 1px;
+      position: relative;
+      margin-top: 8px;
+      text-align: center;
     }
-    .about-banner a:hover {
-      color: var(--beer-orange);
-      border-bottom: 2px solid var(--beer-orange);
+    .about-banner .banner-title {
+      color: #ffd366;
+      font-weight: 800;
+      font-size: 1.17em;
+      margin-bottom: 10px;
+    }
+    .about-banner .banner-btn {
+      background: linear-gradient(90deg,#ffe082 70%,#ffde69 100%);
+      color: #593a19;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid #ffde69;
+      font-size: 1.11em;
+      padding: 12px 32px;
+      margin-top: 18px;
+      box-shadow: 0 2.5px 14px #ffc34a2a;
+      text-decoration: none;
+      transition: background 0.13s, color 0.13s, border 0.13s;
+      display: inline-block;
+    }
+    .about-banner .banner-btn:hover {
+      background: #ffde69;
+      color: #ad7408;
+      border-color: #ffde69;
+      box-shadow: 0 4px 18px #ffde697a;
     }
     @media (max-width: 1200px) {
-      .main-wrapper {
-        flex-direction: column;
-        gap: 0;
-        min-height: unset;
-      }
-      .about-content, .about-banner {
-        max-width: 98vw;
-        width: 99vw;
-      }
-      .about-banner { margin: 22px auto 10px auto; justify-content: center; }
-    }
-    @media (max-width: 900px) {
-      .main-wrapper { padding: 8vw 0 5vw 0; }
-      .about-content { padding: 6vw 2vw; }
-      .about-banner { font-size:1em; padding:12px 10px;}
+      .main-content { flex-direction: column; gap: 22px; }
+      .about-panel, .about-banner { max-width: 99vw; min-width: unset;}
+      .about-banner {margin-left:0;}
     }
     @media (max-width: 700px) {
-      .footer-content { flex-direction: column; gap: 8px; }
+      .about-panel {padding: 16px 7vw 22px 7vw;}
+      .about-banner {padding: 18px 8vw;}
+      .main-content {gap:9vw;}
     }
     footer.footer-main {
       width: 100vw;
-      margin-top: 40px;
+      margin-top: 46px;
       background: linear-gradient(90deg, #38280f 40%, #523813 100%);
       border-radius: 18px 18px 0 0;
       box-shadow: 0 -1px 13px #000a;
       padding: 22px 0 14px 0;
       font-size: 1.12em;
-      color: var(--beer-yellow2);
+      color: #ffd366;
       display: flex;
       justify-content: center;
       font-weight: 600;
-      border-top: 3px solid var(--beer-yellow2);
+      border-top: 3px solid #ffde69;
       position: relative;
       left: 50%;
       right: 50%;
@@ -223,78 +204,84 @@
       width: 96%;
     }
     .footer-links a {
-      color: var(--beer-yellow);
+      color: #ffd366;
       text-decoration: none;
       margin: 0 4px;
       font-weight: 600;
       transition: color 0.13s;
     }
     .footer-links a:hover {
-      color: var(--beer-orange);
+      color: #ffde69;
       text-decoration: underline;
     }
     .footer-links span {
       margin: 0 3px;
-      color: var(--beer-brown-dark);
+      color: #bfa24c;
+    }
+    @media (max-width: 700px) {
+      .footer-content { flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
 <body>
+  <!-- Меню -->
   <div style="display:flex;justify-content:center;margin:36px 0 38px 0;">
-  <nav class="menu-nav-float">
-    <a href="/Beer-Syndicate/" class="menu-btn-float">Главная</a>
-    <a href="/Beer-Syndicate/about" class="menu-btn-float active">О гильдии</a>
-    <a href="/Beer-Syndicate/members" class="menu-btn-float">Состав</a>
-    <a href="/Beer-Syndicate/recruit" class="menu-btn-float">Как вступить</a>
-    <a href="/Beer-Syndicate/contacts" class="menu-btn-float">Контакты</a>
-  </nav>
-</div>
-  <div class="main-wrapper">
-    <div class="about-content">
-      <h2>Добро пожаловать в «Пивной Синдикат»!</h2>
+    <nav class="menu-nav-float">
+      <a href="/Beer-Syndicate/" class="menu-btn-float">Главная</a>
+      <a href="/Beer-Syndicate/about" class="menu-btn-float active">О гильдии</a>
+      <a href="/Beer-Syndicate/members" class="menu-btn-float">Состав</a>
+      <a href="/Beer-Syndicate/recruit" class="menu-btn-float">Как вступить</a>
+      <a href="/Beer-Syndicate/contacts" class="menu-btn-float">Контакты</a>
+    </nav>
+  </div>
+  <!-- Контент -->
+  <div class="main-content">
+    <div class="about-panel">
+      <h1>Добро пожаловать в «Пивной Синдикат»!</h1>
       <p>Наша гильдия создана для комфортной и совместной игры:</p>
-      <ul class="about-list">
+      <ul>
         <li>Свобода выбора</li>
         <li>Занимайся тем, что нравится — <b>PVP</b>, <b>PVE</b>, фарм, крафт или просто общение внутри Ги</li>
       </ul>
       <p>Единственное, что мы требуем: <b>поддерживай товарищей, участвуй в жизни гильдии и делись опытом</b>.<br>
-      Заходи, комфортно устраивайся и отдыхай — <b>«Пивной Синдикат» рад каждому!</b></p>
+        Заходи, комфортно устраивайся и отдыхай — <b>«Пивной Синдикат» рад каждому!</b>
+      </p>
       <hr>
-      <h2>📜 Правила «Пивного Синдиката»</h2>
-      <div class="about-rule-title"><span class="rule-num">1️⃣</span> Основные принципы</div>
-      <ul class="rule-list">
-        <li><span class="rule-label">Уважение —</span> токсичность, оскорбления, дискриминации или буллинг только в дружеском формате. Мы не ханжи, но и не быдло ебанное :3</li>
-        <li><span class="rule-label">Совместная игра —</span> помогаем друг другу, делимся ресурсами (по возможности) и знаниями.</li>
-        <li><span class="rule-label">Активность —</span> даже если вы заняты IRL, старайтесь иногда заходить в Discord/игру, чтобы гильдия не казалась «мертвой».</li>
+      <div class="block-title"><span>📜</span>Правила «Пивного Синдиката»</div>
+      <div class="section-header">1️⃣ Основные принципы</div>
+      <ul class="section-list">
+        <li><b>Уважение —</b> токсичность, оскорбления, дискриминации или буллинг только в дружеском формате. Мы не ханжи, но и не быдло ебанное :3</li>
+        <li><b>Совместная игра —</b> помогаем друг другу, делимся ресурсами (по возможности) и знаниями.</li>
+        <li><b>Активность —</b> даже если вы заняты IRL, старайтесь иногда заходить в Discord/игру, чтобы гильдия не казалась «мертвой».</li>
       </ul>
-      <div class="about-rule-title"><span class="rule-num">2️⃣</span> В игре</div>
-      <ul class="rule-list">
-        <li><span class="rule-label">Гильд-ивенты —</span> участие в совместных мероприятиях приветствуется, но не строго обязательно.</li>
-        <li><span class="rule-label">Честность —</span> никакого скама, краж из общего склада или обмана согильдийцев.</li>
-        <li><span class="rule-label">Конфликты —</span> решаем мирно через офицеров/лидера, а не переходим на личности.</li>
+      <div class="section-header">2️⃣ В игре</div>
+      <ul class="section-list">
+        <li><b>Гильд-ивенты —</b> участие в совместных мероприятиях приветствуется, но не строго обязательно.</li>
+        <li><b>Честность —</b> никакого скама, краж из общего склада или обмана согильдийцев.</li>
+        <li><b>Конфликты —</b> решаем мирно через офицеров/лидера, а не переходим на личности.</li>
       </ul>
-      <div class="about-rule-title"><span class="rule-num">3️⃣</span> В Discord</div>
-      <p><b>Голосовые каналы:</b></p>
-      <ul class="rule-list">
+      <div class="section-header">3️⃣ В Discord</div>
+      <b>Голосовые каналы:</b>
+      <ul class="section-list">
         <li>Гостиная — Общение с новобранцами</li>
         <li>Таверна — Общение на любые темы</li>
         <li>Голосовой 1,2 — Общение по игре</li>
         <li>КП 1,2 — Личные чаты</li>
       </ul>
-      <p><b>Текстовые чаты:</b></p>
-      <ul class="rule-list">
+      <b>Текстовые чаты:</b>
+      <ul class="section-list">
         <li>Таверна — Общение на любые темы</li>
         <li>КП 1,2 — Личные чаты</li>
         <li>Общее — Спам помойка</li>
       </ul>
-      <p>
-        <b style="color:#e53935;">NSFW-контент запрещён.</b>
-      </p>
+      <p style="color:#ff7c43"><b>NSFW-контент запрещён.</b></p>
     </div>
-    <!-- Баннер справа -->
-    <aside class="about-banner">
-      <span style="font-size:1.17em;">🏆 Текущий <a href="/Beer-Syndicate/top">топ-5 вкладчиков недели</a></span>
-    </aside>
+    <div class="about-banner">
+      <div class="banner-title">🏆 Текущий топ-5 вкладчиков недели</div>
+      <div>Кто лучший вкладчик?<br>
+      Переходи к текущему рейтингу участников — получи свою награду!</div>
+      <a href="/Beer-Syndicate/top" class="banner-btn">Перейти к ТОПу</a>
+    </div>
   </div>
   <footer class="footer-main">
     <div class="footer-content">
