@@ -216,23 +216,6 @@
   </style>
 </head>
 <body>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(102740516, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/102740516" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
   <div class="main-wrapper">
     <!-- Меню -->
     <nav class="menu-nav">
@@ -260,27 +243,27 @@
         <tr>
           <td>1</td>
           <td>Нолемоций</td>
-          <td>950</td>
+          <td>1017</td>
         </tr>
         <tr>
           <td>2</td>
           <td>СаняДробовик</td>
-          <td>430</td>
+          <td>560</td>
         </tr>
         <tr>
           <td>3</td>
           <td>Thxfordrugs</td>
-          <td>240</td>
+          <td>260</td>
         </tr>
         <tr>
           <td>4</td>
           <td>Пив</td>
-          <td>151</td>
+          <td>191</td>
         </tr>
         <tr>
           <td>5</td>
-          <td>Лолечка</td>
-          <td>150</td>
+          <td>Бешенный</td>
+          <td>170</td>
         </tr>
       </table>
       <div class="timer-block">
@@ -308,15 +291,15 @@
   <script>
   function updateTimer() {
     const now = new Date();
-    const nextSaturday = new Date();
-    // Вычисляем следующую субботу 23:59
-    nextSaturday.setDate(now.getDate() + ((6 - now.getDay() + 7) % 7));
-    nextSaturday.setHours(23, 59, 0, 0);
-    // Если сегодня суббота и до 23:59
-    if (now.getDay() === 6 && now.getHours() < 23) {
-      nextSaturday.setDate(now.getDate());
+    const nextSunday = new Date();
+    // Вычисляем следующее воскресенье 23:59
+    nextSunday.setDate(now.getDate() + ((7 - now.getDay()) % 7));
+    nextSunday.setHours(23, 59, 0, 0);
+    // Если сегодня воскресенье и до 23:59
+    if (now.getDay() === 0 && now.getHours() < 23) {
+      nextSunday.setDate(now.getDate());
     }
-    const diff = nextSaturday - now;
+    const diff = nextSunday - now;
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
