@@ -137,12 +137,6 @@
       font-weight: 600;
       font-size: 1.09em;
     }
-    .top-table tr:nth-child(2) td {
-      background: var(--beer-yellow2);
-      color: #ad8809;
-      font-weight: 700;
-      font-size: 1.15em;
-    }
     /* Таймер и победители */
     .timer-block {
       margin: 14px 0;
@@ -157,10 +151,31 @@
       letter-spacing: 0.03em;
     }
     .winners-block {
-      margin-top: 8px;
-      font-size: 1.02em;
+      margin-top: 14px;
+      font-size: 1.06em;
       color: #e3c57a;
       text-align: center;
+      padding: 12px 0 0 0;
+      border-top: 1px solid #ffde6942;
+    }
+    .winners-list {
+      list-style: none;
+      padding: 0;
+      margin: 9px 0 0 0;
+      color: var(--beer-yellow);
+      font-size: 1.02em;
+    }
+    .winners-list li {
+      margin-bottom: 5px;
+      color: var(--beer-cream2);
+    }
+    .winners-week-title {
+      color: var(--beer-yellow2);
+      font-weight: 700;
+      margin-top: 8px;
+      margin-bottom: 3px;
+      font-size: 1.07em;
+      display: block;
     }
     /* Футер */
     .footer-main {
@@ -228,7 +243,7 @@
     <!-- Блок топа -->
     <div class="top-wrap">
       <div class="top-title">Топ-5 по вкладу за неделю</div>
-      <div class="top-update">Последнее обновление: 22.06.25 04:00</div>
+      <div class="top-update">Последнее обновление: 24.06.25 00:00</div>
       <table class="top-table">
         <colgroup>
           <col>
@@ -240,37 +255,24 @@
           <th>Имя</th>
           <th>Вклад (неделя)</th>
         </tr>
-        <tr>
-          <td>1</td>
-          <td>Нолемоций</td>
-          <td>1027</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>СаняДробовик</td>
-          <td>570</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Thxfordrugs</td>
-          <td>280</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Пив</td>
-          <td>191</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Лолечка</td>
-          <td>180</td>
-        </tr>
+        <!-- Пусто — никто ещё не набрал вкладов -->
       </table>
       <div class="timer-block">
         До сброса топа: <span class="timer">Загрузка...</span>
       </div>
       <div class="winners-block">
-        Победители прошлой недели: ---
+        <span class="winners-week-title">Победители 1 недели:</span>
+        <ul class="winners-list">
+          <li>🥇 Нолемоций — 1017</li>
+          <li>🥈 СаняДробовик — 560</li>
+          <li>🥉 Thxfordrugs — 260</li>
+          <li>4 место: Пив — 191</li>
+          <li>5 место: Бешенный — 170</li>
+        </ul>
+        <span class="winners-week-title">Победители 2 недели:</span>
+        <ul class="winners-list">
+          <li>Появятся здесь после окончания второй недели</li>
+        </ul>
       </div>
     </div>
   </div>
