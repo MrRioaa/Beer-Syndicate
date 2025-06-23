@@ -1,0 +1,107 @@
+<!-- Подключаем Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+<style>
+  /* Общий контейнер */
+  .events-block {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background: #fcfcfd;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    padding: 28px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2d2d2d;
+  }
+  .event-item {
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    padding: 14px;
+  }
+  .event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .event-name {
+    font-size: 1.13em;
+  }
+  .event-next {
+    background: #ffda73;
+    padding: 4px 10px;
+    border-radius: 7px;
+    font-size: 0.95em;
+    color: #2d2d2d;
+  }
+  .event-timer {
+    font-size: 1.07em;
+    margin-top: 4px;
+    font-weight: 600;
+    color: #145ba0;
+  }
+</style>
+
+<div class="events-block" id="events-block">
+  <h2 style="text-align:center; margin-bottom: 18px; color:#145ba0; font-size:1.4em;">Расписание событий</h2>
+
+  <div class="event-item">
+    <div class="event-header">
+      <span class="event-name">Событие A</span>
+      <span class="event-next">запуск через</span>
+    </div>
+    <div class="event-time">Начало: <span>26.06.2025 18:00</span></div>
+    <div class="event-timer" id="timer-1">Загрузка...</div>
+  </div>
+
+  <div class="event-item">
+    <div class="event-header">
+      <span class="event-name">Событие B</span>
+      <span class="event-next">запуск через</span>
+    </div>
+    <div class="event-time">Начало: <span>27.06.2025 09:30</span></div>
+    <div class="event-timer" id="timer-2">Загрузка...</div>
+  </div>
+
+  <div class="event-item">
+    <div class="event-header">
+      <span class="event-name">Событие C</span>
+      <span class="event-next">запуск через</span>
+    </div>
+    <div class="event-time">Начало: <span>28.06.2025 21:15</span></div>
+    <div class="event-timer" id="timer-3">Загрузка...</div>
+  </div>
+</div>
+
+<script>
+  const events = [
+    { id: "timer-1", time: "26.06.2025 18:00" },
+    { id: "timer-2", time: "27.06.2025 09:30" },
+    { id: "timer-3", time: "28.06.2025 21:15" },
+  ];
+
+  function startTimer(evt) {
+    const el = document.getElementById(evt.id);
+    const target = moment(evt.time, "DD.MM.YYYY HH:mm");
+
+    function update() {
+      const now = moment();
+      const diff = target.diff(now);
+
+      if (diff <= 0) {
+        el.textContent = "Событие началось!";
+        return;
+      }
+
+      const d = moment.duration(diff);
+      el.textContent = `${d.days()}д ${d.hours()}ч ${d.minutes()}м ${d.seconds()}с`;
+      setTimeout(update, 1000);
+    }
+
+    update();
+  }
+
+  events.forEach(startTimer);
+</script>
