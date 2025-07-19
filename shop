@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Магазин | Пивной Синдикат</title>
+  <link rel="stylesheet" href="/Beer-Syndicate/styles.css"> <!-- если стили выносите отдельно -->
+  <style>
+    body {
+      background: var(--beer-bg);
+      color: var(--beer-cream);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .main-wrapper {
+      max-width: 980px;
+      margin: 40px auto;
+      padding: 32px;
+      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+      border-radius: 20px;
+      border: 1.5px solid var(--beer-border);
+      box-shadow: 0 8px 36px #000b;
+    }
+    h1 {
+      text-align: center;
+      color: var(--beer-yellow);
+      text-shadow: 0 2px 10px #000;
+      margin-bottom: 30px;
+    }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .item-card {
+      background: var(--beer-panel-light);
+      border: 2px solid var(--beer-brown);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 18px #0005;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .item-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px #0007;
+    }
+    .item-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .item-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: var(--beer-yellow2);
+      margin-bottom: 6px;
+    }
+    .item-price {
+      color: var(--beer-orange);
+      font-size: 1em;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1>🍺 Магазин гильдии</h1>
+    <div class="shop-grid">
+      <!-- Пример предмета -->
+      <div class="item-card">
+        <img src="images/fish-bait.jpg" alt="Приманка для рыбы">
+        <div class="item-name">Приманка для рыбы</div>
+        <div class="item-price">15 золота</div>
+      </div>
+      <div class="item-card">
+        <img src="images/barrel-costume.jpg" alt="Костюм Пивной Бочки">
+        <div class="item-name">Костюм "Пивная Бочка"</div>
+        <div class="item-price">250 золота</div>
+      </div>
+      <div class="item-card">
+        <img src="images/beer-title.jpg" alt="Титул Пивного Дегустатора">
+        <div class="item-name">Титул "Пивной Дегустатор"</div>
+        <div class="item-price">100 золота</div>
+      </div>
+      <!-- Добавляй больше -->
+    </div>
+  </div>
+</body>
+</html>
