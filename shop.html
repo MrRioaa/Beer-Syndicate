@@ -2,35 +2,15 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин | Пивной Синдикат</title>
-  <link rel="stylesheet" href="/Beer-Syndicate/styles.css"> <!-- если стили выносите отдельно -->
+  <link rel="stylesheet" href="/Beer-Syndicate/styles.css">
   <style>
-    body {
-      background: var(--beer-bg);
-      color: var(--beer-cream);
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .main-wrapper {
-      max-width: 980px;
-      margin: 40px auto;
-      padding: 32px;
-      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
-      border-radius: 20px;
-      border: 1.5px solid var(--beer-border);
-      box-shadow: 0 8px 36px #000b;
-    }
-    h1 {
-      text-align: center;
-      color: var(--beer-yellow);
-      text-shadow: 0 2px 10px #000;
-      margin-bottom: 30px;
-    }
     .shop-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 24px;
+      margin-top: 24px;
     }
     .item-card {
       background: var(--beer-panel-light);
@@ -66,9 +46,19 @@
 </head>
 <body>
   <div class="main-wrapper">
-    <h1>🍺 Магазин гильдии</h1>
+    <nav class="menu-nav">
+      <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+      <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+      <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+      <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+      <a href="/Beer-Syndicate/shop" class="menu-btn active">Магазин</a>
+      <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+    </nav>
+
+    <h1>🛒 Магазин гильдии</h1>
+    <div class="subtitle">Обменивай вклад на полезные и весёлые вещи!</div>
+
     <div class="shop-grid">
-      <!-- Пример предмета -->
       <div class="item-card">
         <img src="images/fish-bait.jpg" alt="Приманка для рыбы">
         <div class="item-name">Приманка для рыбы</div>
@@ -80,12 +70,28 @@
         <div class="item-price">250 золота</div>
       </div>
       <div class="item-card">
-        <img src="images/beer-title.jpg" alt="Титул Пивного Дегустатора">
+        <img src="images/beer-title.jpg" alt="Титул Пивной Дегустатор">
         <div class="item-name">Титул "Пивной Дегустатор"</div>
         <div class="item-price">100 золота</div>
       </div>
-      <!-- Добавляй больше -->
+      <div class="item-card">
+        <img src="images/freight-pass.jpg" alt="Купон на перевозку груза">
+        <div class="item-name">Купон на перевозку груза</div>
+        <div class="item-price">80 золота</div>
+      </div>
     </div>
   </div>
+  <footer class="footer-main">
+    <div class="footer-content">
+      <span>© 2025 Beer-Syndicate</span>
+      <span class="footer-links">
+        <a href="/Beer-Syndicate/contacts">Контакты</a>
+        <span>|</span>
+        <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
+        <span>|</span>
+        <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+      </span>
+    </div>
+  </footer>
 </body>
 </html>
