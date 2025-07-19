@@ -4,8 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин | Пивной Синдикат</title>
-  <link rel="stylesheet" href="/Beer-Syndicate/styles.css">
   <style>
+    :root {
+      --beer-bg: #2b2116;
+      --beer-panel: #3b2e22;
+      --beer-panel-light: #53422d;
+      --beer-cream: #fff8e1;
+      --beer-cream2: #ffe3a3;
+      --beer-yellow: #FFDE69;
+      --beer-yellow2: #FFC34A;
+      --beer-orange: #FFA941;
+      --beer-brown: #A87536;
+      --beer-brown-dark: #6e4923;
+      --beer-border: #6e4923;
+      --beer-shadow: #0008;
+    }
+    body {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: var(--beer-bg);
+      margin: 0;
+      padding: 0;
+      color: var(--beer-cream);
+      min-height: 100vh;
+    }
+    .main-wrapper {
+      max-width: 980px;
+      margin: 38px auto 0 auto;
+      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 36px #000b, 0 1.5px 6px #ffde6930;
+      padding: 32px 28px 22px 28px;
+      border: 1.5px solid var(--beer-border);
+      position: relative;
+    }
+    .menu-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      background: var(--beer-panel);
+      border-radius: 18px;
+      box-shadow: 0 3px 16px #000a, 0 1.5px 4px #ffde6930;
+      padding: 14px 0;
+      margin-bottom: 32px;
+      border: 2px solid var(--beer-brown);
+    }
+    .menu-btn {
+      background: var(--beer-cream2);
+      color: var(--beer-panel);
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 26px;
+      text-decoration: none;
+      font-size: 1.08em;
+      transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.1s;
+      box-shadow: 0 1.5px 7px #ffc34a1c;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      top: 0;
+    }
+    .menu-btn:hover, .menu-btn:focus {
+      background: var(--beer-yellow);
+      color: var(--beer-panel);
+      border-color: var(--beer-orange);
+      box-shadow: 0 2.5px 18px #ffde6933;
+      transform: translateY(-2px) scale(1.04);
+      z-index: 2;
+    }
+    .menu-btn.active {
+      background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
+      border-color: var(--beer-orange);
+      color: var(--beer-panel);
+      box-shadow: 0 2.5px 13px #ffde694a;
+    }
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.2em;
+      margin: 15px 0 10px 0;
+      letter-spacing: 0.01em;
+      color: var(--beer-yellow);
+      text-shadow: 0 2px 12px #6e492380;
+    }
+    .subtitle {
+      text-align: center;
+      margin-bottom: 22px;
+      font-size: 1.15em;
+      color: var(--beer-cream2);
+    }
     .shop-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -42,6 +130,47 @@
       font-size: 1em;
       font-weight: 600;
     }
+    footer.footer-main {
+      width: 100%;
+      margin-top: 40px;
+      background: linear-gradient(90deg, #38280f 40%, #523813 100%);
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 -1px 15px #000a;
+      padding: 28px 0 20px 0;
+      font-size: 1.13em;
+      color: var(--beer-yellow2);
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+      border-top: 4px solid var(--beer-yellow2);
+      letter-spacing: 0.01em;
+    }
+    .footer-content {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 96%;
+    }
+    .footer-links a {
+      color: var(--beer-yellow);
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 700;
+      transition: color 0.13s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .footer-links a:hover {
+      color: var(--beer-orange);
+      border-bottom: 2px solid var(--beer-orange);
+    }
+    .footer-links span {
+      margin: 0 4px;
+      color: var(--beer-brown-dark);
+    }
   </style>
 </head>
 <body>
@@ -54,10 +183,8 @@
       <a href="/Beer-Syndicate/shop" class="menu-btn active">Магазин</a>
       <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
     </nav>
-
     <h1>🛒 Магазин гильдии</h1>
     <div class="subtitle">Обменивай вклад на полезные и весёлые вещи!</div>
-
     <div class="shop-grid">
       <div class="item-card">
         <img src="images/fish-bait.jpg" alt="Приманка для рыбы">
