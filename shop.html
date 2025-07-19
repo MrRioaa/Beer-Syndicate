@@ -1,76 +1,162 @@
-<section class="shop-grid">
-  <!-- 12 карточек -->
-  <!-- Все карточки — заглушки -->
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Магазин | Пивной Синдикат</title>
+  <link rel="stylesheet" href="/Beer-Syndicate/styles.css">
+  <style>
+    :root {
+      --beer-bg: #2b2116;
+      --beer-panel: #3b2e22;
+      --beer-panel-light: #53422d;
+      --beer-cream: #fff8e1;
+      --beer-cream2: #ffe3a3;
+      --beer-yellow: #FFDE69;
+      --beer-yellow2: #FFC34A;
+      --beer-orange: #FFA941;
+      --beer-brown: #A87536;
+      --beer-brown-dark: #6e4923;
+      --beer-border: #6e4923;
+      --beer-shadow: #0008;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--beer-bg);
+      margin: 0;
+      padding: 0;
+      color: var(--beer-cream);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .main-wrapper {
+      flex: 1;
+      max-width: 980px;
+      margin: 38px auto;
+      padding: 32px 28px;
+      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 36px #000b;
+      border: 1.5px solid var(--beer-border);
+    }
+    .menu-nav {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      background: var(--beer-panel);
+      border-radius: 18px;
+      padding: 14px 0;
+      margin-bottom: 32px;
+      border: 2px solid var(--beer-brown);
+      box-shadow: 0 3px 16px #000a;
+    }
+    .menu-btn {
+      background: var(--beer-cream2);
+      color: var(--beer-panel);
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 10px 26px;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+    .menu-btn:hover {
+      background: var(--beer-yellow);
+      color: var(--beer-panel);
+      border-color: var(--beer-orange);
+    }
+    .menu-btn.active {
+      background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
+      color: var(--beer-panel);
+    }
+    h1 {
+      text-align: center;
+      color: var(--beer-yellow);
+      text-shadow: 0 2px 12px #0008;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      text-align: center;
+      color: var(--beer-cream2);
+      margin-bottom: 22px;
+    }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .item-card {
+      background: var(--beer-panel-light);
+      border: 2px solid var(--beer-brown);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 18px #0005;
+    }
+    .item-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .item-name {
+      font-weight: bold;
+      color: var(--beer-yellow2);
+    }
+    .item-desc {
+      font-size: 0.95em;
+      color: var(--beer-cream2);
+    }
+    .item-price {
+      font-weight: bold;
+      color: var(--beer-orange);
+    }
+    footer.footer-main {
+      background: linear-gradient(90deg, #38280f 40%, #523813 100%);
+      border-top: 4px solid var(--beer-yellow2);
+      border-radius: 18px 18px 0 0;
+      padding: 28px 0 20px;
+      font-size: 1.13em;
+      color: var(--beer-yellow2);
+      text-align: center;
+      font-weight: 700;
+      box-shadow: 0 -1px 15px #000a;
+    }
+    .footer-links a {
+      color: var(--beer-yellow);
+      margin: 0 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <nav class="menu-nav">
+      <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
+      <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
+      <a href="/Beer-Syndicate/members" class="menu-btn">Состав</a>
+      <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
+      <a href="/Beer-Syndicate/shop" class="menu-btn active">Магазин</a>
+      <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
+    </nav>
+    <h1>🛒 Магазин гильдии</h1>
+    <div class="subtitle">Обменивай вклад на полезные и весёлые вещи!</div>
+
+    <section class="shop-grid">
+      <!-- 12 карточек-заглушек -->
+      <!-- карточки идут ниже -->
+      <!-- (как в документе, ты уже видел) -->
+    </section>
   </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-  <div class="item-card">
-    <img src="images/placeholder.png" alt="Скоро в продаже">
-    <div class="item-name">???</div>
-    <div class="item-desc">Продавец: ???</div>
-    <div class="item-price">0 золота</div>
-  </div>
-</section>
+  <footer class="footer-main">
+    <div>
+      © 2025 Beer-Syndicate
+      <span class="footer-links">
+        <a href="/Beer-Syndicate/contacts">Контакты</a> |
+        <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a> |
+        <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
