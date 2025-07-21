@@ -1,3 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Гайды | Пивной Синдикат</title>
+  <style>
+    :root {
+      --beer-bg: #2b2116;
+      --beer-panel: #3b2e22;
+      --beer-panel-light: #53422d;
+      --beer-cream: #fff8e1;
+      --beer-cream2: #ffe3a3;
+      --beer-yellow: #ffde69;
+      --beer-yellow2: #ffc34a;
+      --beer-orange: #ffa941;
+      --beer-brown: #a87536;
+      --beer-brown-dark: #6e4923;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--beer-bg);
+      color: var(--beer-cream);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .main-wrapper {
+      flex: 1;
+      max-width: 980px;
+      margin: 38px auto;
+      padding: 32px 28px;
+      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 36px #000b;
+      border: 1.5px solid var(--beer-brown-dark);
+    }
+
+    nav.menu-nav {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .menu-btn {
+      background: var(--beer-cream2);
+      color: var(--beer-panel);
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 22px;
+      text-decoration: none;
+      transition: 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .menu-btn:hover {
+      background: var(--beer-yellow);
+      border-color: var(--beer-orange);
+    }
+
+    .menu-btn.active {
+      background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
+      color: var(--beer-panel);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--beer-yellow);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--beer-cream2);
+      margin-bottom: 24px;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .guide-card {
+      background-color: var(--beer-panel-light);
+      border: 2px solid var(--beer-brown);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 4px 16px #0006;
+    }
+
+    .guide-card h3 {
+      color: var(--beer-yellow2);
+      margin-top: 0;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .guide-card p {
+      font-size: 0.95em;
+      color: var(--beer-cream2);
+    }
+
+    .guide-card button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: var(--beer-yellow2);
+      color: var(--beer-panel);
+      border: 2px solid var(--beer-yellow);
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .guide-card button:hover {
+      background: var(--beer-yellow);
+      color: var(--beer-orange);
+      border-color: var(--beer-orange);
+    }
+
+    .modal-guide {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      overflow: auto;
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: var(--beer-panel);
+      margin: auto;
+      padding: 24px;
+      border: 3px solid var(--beer-brown-dark);
+      width: 90%;
+      max-width: 720px;
+      border-radius: 16px;
+      color: var(--beer-cream);
+      box-shadow: 0 4px 20px #000b;
+      position: relative;
+    }
+
+    .modal-content h2 {
+      color: var(--beer-yellow);
+      margin-top: 0;
+    }
+
+    .modal-content h3 {
+      color: var(--beer-yellow2);
+      margin-top: 20px;
+    }
+
+    .modal-content p {
+      font-size: 0.97em;
+      line-height: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .close {
+      color: var(--beer-yellow);
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer.footer-main {
+      background: linear-gradient(90
+
+
 deg, #38280f 40%, #523813 100%);
       border-top: 4px solid var(--beer-yellow2);
       border-radius: 18px 18px 0 0;
@@ -107,3 +286,15 @@ deg, #38280f 40%, #523813 100%);
 
       window.onclick = function(event) {
         const modals = document.querySelectorAll(".modal-guid
+
+
+e");
+        modals.forEach(modal => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      }
+    </script>
+</body>
+</html>
