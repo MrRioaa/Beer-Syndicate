@@ -1,179 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Гайды | Пивной Синдикат</title>
-  <style>
-    :root {
-      --beer-bg: #2b2116;
-      --beer-panel: #3b2e22;
-      --beer-panel-light: #53422d;
-      --beer-cream: #fff8e1;
-      --beer-cream2: #ffe3a3;
-      --beer-yellow: #ffde69;
-      --beer-yellow2: #ffc34a;
-      --beer-orange: #ffa941;
-      --beer-brown: #a87536;
-      --beer-brown-dark: #6e4923;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--beer-bg);
-      color: var(--beer-cream);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .main-wrapper {
-      flex: 1;
-      max-width: 980px;
-      margin: 38px auto;
-      padding: 32px 28px;
-      background: linear-gradient(140deg, var(--beer-panel) 88%, var(--beer-panel-light) 100%);
-      border-radius: 24px;
-      box-shadow: 0 8px 36px #000b;
-      border: 1.5px solid var(--beer-brown-dark);
-    }
-
-    nav.menu-nav {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .menu-btn {
-      background: var(--beer-cream2);
-      color: var(--beer-panel);
-      font-weight: 700;
-      border-radius: 10px;
-      padding: 10px 22px;
-      text-decoration: none;
-      transition: 0.2s;
-      border: 2px solid transparent;
-    }
-
-    .menu-btn:hover {
-      background: var(--beer-yellow);
-      border-color: var(--beer-orange);
-    }
-
-    .menu-btn.active {
-      background: linear-gradient(95deg, var(--beer-yellow) 70%, var(--beer-yellow2) 100%);
-      color: var(--beer-panel);
-    }
-
-    h1 {
-      text-align: center;
-      color: var(--beer-yellow);
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: var(--beer-cream2);
-      margin-bottom: 24px;
-    }
-
-    .guide-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 24px;
-    }
-
-    .guide-card {
-      background-color: var(--beer-panel-light);
-      border: 2px solid var(--beer-brown);
-      border-radius: 12px;
-      padding: 18px 20px;
-      box-shadow: 0 4px 16px #0006;
-    }
-
-    .guide-card h3 {
-      color: var(--beer-yellow2);
-      margin-top: 0;
-    }
-
-    .guide-card p {
-      font-size: 0.95em;
-      color: var(--beer-cream2);
-    }
-
-    .guide-card button {
-      margin-top: 10px;
-      padding: 8px 14px;
-      background: var(--beer-yellow2);
-      color: var(--beer-panel);
-      border: 2px solid var(--beer-yellow);
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .guide-card button:hover {
-      background: var(--beer-yellow);
-      color: var(--beer-orange);
-      border-color: var(--beer-orange);
-    }
-
-    .modal-guide {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.7);
-      overflow: auto;
-      padding-top: 60px;
-    }
-
-    .modal-content {
-      background-color: var(--beer-panel);
-      margin: auto;
-      padding: 24px;
-      border: 3px solid var(--beer-brown-dark);
-      width: 90%;
-      max-width: 720px;
-      border-radius: 16px;
-      color: var(--beer-cream);
-      box-shadow: 0 4px 20px #000b;
-      position: relative;
-    }
-
-    .modal-content h2 {
-      color: var(--beer-yellow);
-      margin-top: 0;
-    }
-
-    .modal-content p {
-      font-size: 0.97em;
-      line-height: 1.5em;
-    }
-
-    .close {
-      color: var(--beer-yellow);
-      position: absolute;
-      top: 12px;
-      right: 20px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer.footer-main {
-      background: linear-gradient(90deg, #38280f 40%, #523813 100%);
+deg, #38280f 40%, #523813 100%);
       border-top: 4px solid var(--beer-yellow2);
       border-radius: 18px 18px 0 0;
       padding: 24px 0;
       text-align: center;
-
-
-color: var(--beer-yellow2);
+      color: var(--beer-yellow2);
       font-weight: 700;
       margin-top: 40px;
     }
@@ -182,6 +12,17 @@ color: var(--beer-yellow2);
       color: var(--beer-yellow);
       text-decoration: none;
       margin: 0 8px;
+    }
+
+    .top-banner {
+      text-align: center;
+      background: linear-gradient(95deg, var(--beer-brown-dark), var(--beer-brown));
+      padding: 10px 16px;
+      border-radius: 12px;
+      color: var(--beer-cream);
+      font-weight: 600;
+      margin-bottom: 32px;
+      box-shadow: 0 0 12px #000a;
     }
   </style>
 </head>
@@ -198,88 +39,71 @@ color: var(--beer-yellow2);
       <a href="contacts.html" class="menu-btn">Контакты</a>
     </nav>
 
+    <div class="top-banner">🏆 Лучшие по вкладу: СаняДробовик (1428), Thxfordrugs (281), Пив (172)</div>
+
     <h1>📘 Гайды Пивного Синдиката</h1>
     <div class="subtitle">Полезные советы, проверенные опытом наших бойцов</div>
 
     <section class="guide-grid">
-  <!-- Гайд 1 -->
-  <div class="guide-card">
-    <h3 style="text-align:center; white-space: nowrap;">Фарм золота без затрат ОР</h3>
-    <p>Фарм золота в PvE без использования очков работы. Доступные соло-способы с хорошим доходом.</p>
-    <button onclick="openGuideModal('goldFarm')">Читать</button>
-  </div>
+      <!-- Гайд 1 -->
+      <div class="guide-card">
+        <h3>Фарм золота без затрат ОР</h3>
+        <p>Фарм золота в PvE без использования очков работы. Доступные соло-способы с хорошим доходом.</p>
+        <button onclick="openGuideModal('goldFarm')">Читать</button>
+      </div>
 
-  <!-- Гайд 2 (заглушка) -->
-  <div class="guide-card">
-    <h3 style="text-align:center;">Рыбная ловля</h3>
-    <p>В разработке. Здесь будет подробный гайд по гильдейской рыбалке.</p>
-    <button onclick="openGuideModal('fishingGuide')">Читать</button>
-  </div>
-</section>
+      <!-- Гайд 2 -->
+      <div class="guide-card">
+        <h3>Рыбная ловля</h3>
+        <p>В разработке. Здесь будет подробный гайд по гильдейской рыбалке.</p>
+        <button onclick="openGuideModal('fishingGuide')">Читать</button>
+      </div>
+    </section>
 
-  <!-- Модальное окно -->
-<div id="goldFarm" class="modal-guide">
-  <div class="modal-content">
-    <span class="close" onclick="closeGuideModal('goldFarm')">&times;</span>
-    <h2>Фарм золота без затрат ОР</h2>
+    <!-- Модальное окно 1 -->
+    <div id="goldFarm" class="modal-guide">
+      <div class="modal-content">
+        <span class="close" onclick="closeGuideModal('goldFarm')">&times;</span>
+        <h2>Фарм золота без затрат ОР</h2>
 
-    <h3>Способ 1: Инстансы</h3>
-    <p>
-      • <strong>Библиотека:</strong> 3 захода с големом = ~200–300 голды. Ломай турмалиновые гравировки и весь шмот камнем новолуния — эссенции уходят на продажу.
+        <h3>Способ 1: Инстансы</h3>
+        <p><strong>Библиотека:</strong> 3 захода с големом = 200–300 голды. Ломай турмалиновые гравировки и шмот камнем новолуния. Эссенции — на продажу.</p>
+        <p><strong>Даута:</strong> 3 захода = 150–250 голды. Регистрируйся соло через кнопку «быстрый вход». Лут весь твой. Шмотки и пену — на продажу.</p>
+        <p><strong>Нагашар:</strong> 3 захода в обычную бездну. 250–350 голды. Главный доход — эссенки и стекло из турмалинок.</p>
 
-      • <strong>Даута:</strong> также 3 захода, ~150–250 голды. Запускай <em>соло через «быстрый вход»</em> — весь дроп твой. Шмотки разбирай, пену продавай NPC.
+        <h3>Способ 2: Великий Луг</h3>
+        <p>Находи мобов, по которым урон выше (смотри бафы: колющий — лук, режущий — мили, маг — маги).</p>
+        <p>С них падают осколки пробуждения эфена — очень актуальны.</p>
+        <p>Фармить с банкой + рег. общины на Изначальном материке.</p>
+      </div>
+    </div>
 
-      • <strong>Нагашар:</strong> 3 захода в обычную бездну. 250–350 голды. Главный доход — эссенки и эмалевое стекло с турмалинок.
-    </p>
-
-    <hr style="margin: 20px 0; border-color: var(--beer-brown-dark);">
-
-    <h3>Способ 2: Великий Луг</h3>
-    <p>
-      • Ищи мобов, по которым у тебя бонусный урон (тип урона в бафах: колющий — лук, режущий — мили, маг — маги).
-
-      • Выпадают осколки пробуждения эфена — будет актуально ещё долго.
-
-      • Фармить под банкой + рег. общины (Изначальный материк).
-    </p>
-  </div>
-</div>
     <!-- Модальное окно 2 -->
     <div id="fishingGuide" class="modal-guide">
-  <div class="modal-content">
-    <span class="close" onclick="closeGuideModal('fishingGuide')">&times;</span>
-    <h2>Рыбная ловля</h2>
-    <p>Этот гайд в разработке. Скоро здесь появятся советы по гильдейской рыбалке!</p>
-  </div>
-</div>
+      <div class="modal-content">
+        <span class="close" onclick="closeGuideModal('fishingGuide')">&times;</span>
+        <h2>Рыбная ловля</h2>
+        <p>Гайд находится в разработке. Скоро здесь появятся советы по рыбалке.</p>
+      </div>
+    </div>
 
-  <footer class="footer-main">
-    © 2025 Beer-Syndicate |
-    <span class="footer-links">
-      <a href="contacts.html">Контакты</a> |
-      <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram</a> |
-      <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
-    </span>
-  </footer>
+    <footer class="footer-main">
+      © 2025 Beer-Syndicate |
+      <span class="footer-links">
+        <a href="contacts.html">Контакты</a> |
+        <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram</a> |
+        <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
+      </span>
+    </footer>
 
-  <script>
-    function openGuideModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
+    <script>
+      function openGuideModal(id) {
+        document.getElementById(id).style.display = "block";
+      }
 
-    function closeGuideModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
+      function closeGuideModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
 
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll(".modal-guide");
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    }
-  </script>
-
-</body>
-</html>
+      window.onclick = function(event) {
+        const modals = document.querySelectorAll(".modal-guid
