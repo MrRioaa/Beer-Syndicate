@@ -79,160 +79,25 @@
       color: var(--beer-panel);
       box-shadow: 0 2.5px 13px #ffde694a;
     }
-    /* Блок топа */
-    .top-wrap {
-      max-width: 600px;
-      margin: 0 auto 48px auto;
-      background: var(--beer-panel-light);
-      border-radius: 18px;
-      box-shadow: 0 2px 12px #0007;
-      padding: 32px 28px 28px 28px;
-      font-size: 1.15em;
-      color: var(--beer-cream);
-      border: 2px solid var(--beer-border);
-    }
-    .top-title {
-      font-size: 1.5em;
-      font-weight: 700;
-      color: var(--beer-yellow2);
-      margin-bottom: 8px;
-      text-align: center;
-      text-shadow: 0 2px 8px #ffde6940;
-    }
-    .top-update {
-      color: #e3c57a;
-      font-size: 1em;
-      margin-bottom: 18px;
-      text-align: center;
-    }
-    /* таблица */
-    .top-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0 auto 18px auto;
-      table-layout: fixed;
-      background: var(--beer-panel);
-      border-radius: 13px;
-      overflow: hidden;
-      box-shadow: 0 1px 8px #0004;
-    }
-    .top-table colgroup col:nth-child(1) { width: 25%; }
-    .top-table colgroup col:nth-child(2) { width: 50%; }
-    .top-table colgroup col:nth-child(3) { width: 25%; }
-    .top-table th {
-      background: var(--beer-yellow);
-      color: var(--beer-panel);
-      font-weight: 700;
-      padding: 12px 15px;
-      text-align: center;
-      border: none;
-      font-size: 1.13em;
-    }
-    .top-table td {
-      padding: 12px 15px;
-      text-align: center;
-      border: none;
-      background: var(--beer-cream2);
-      color: var(--beer-panel);
-      font-weight: 600;
-      font-size: 1.09em;
-    }
-    /* Таймер и победители */
-    .timer-block {
-      margin: 14px 0;
-      font-size: 1.02em;
-      color: #e3c57a;
-      text-align: center;
-    }
-    .timer {
-      font-weight: bold;
-      color: var(--beer-yellow);
-      font-size: 1.08em;
-      letter-spacing: 0.03em;
-    }
-    .winners-block {
-      margin-top: 14px;
-      font-size: 1.06em;
-      color: #e3c57a;
-      text-align: center;
-      padding: 12px 0 0 0;
-      border-top: 1px solid #ffde6942;
-    }
-    .winners-list {
-      list-style: none;
-      padding: 0;
-      margin: 9px 0 0 0;
-      color: var(--beer-yellow);
-      font-size: 1.02em;
-    }
-    .winners-list li {
-      margin-bottom: 5px;
-      color: var(--beer-cream2);
-    }
-    .winners-week-title {
-      color: var(--beer-yellow2);
-      font-weight: 700;
-      margin-top: 8px;
-      margin-bottom: 3px;
-      font-size: 1.07em;
-      display: block;
-    }
-    /* Футер */
-    .footer-main {
-      width: 100%;
-      margin-top: 36px;
-      background: linear-gradient(90deg, #38280f 40%, #523813 100%);
-      border-radius: 18px 18px 0 0;
-      box-shadow: 0 -1px 13px #000a;
-      padding: 28px 0 20px 0;
-      font-size: 1.13em;
-      color: var(--beer-yellow2);
-      display: flex;
-      justify-content: center;
-      font-weight: 700;
-      border-top: 4px solid var(--beer-yellow2);
-      letter-spacing: 0.01em;
-    }
-    .footer-content {
-      max-width: 850px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 96%;
-    }
-    .footer-links a {
-      color: var(--beer-yellow);
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: 700;
-      transition: color 0.13s;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-    }
-    .footer-links a:hover {
-      color: var(--beer-orange);
-      border-bottom: 2px solid var(--beer-orange);
-    }
-    .footer-links span {
-      margin: 0 4px;
-      color: var(--beer-brown-dark);
-    }
-    @media (max-width: 800px) {
-      .menu-nav, .top-wrap { max-width: 97vw; }
-      .top-table th, .top-table td { padding: 8px 10px; font-size: 0.96em; }
-    }
-    @media (max-width: 700px) {
-      .footer-content { flex-direction: column; gap: 10px; }
-      .main-wrapper { padding: 0 2vw; }
-      .top-title { font-size: 1.15em; }
-    }
+    .top-title { font-size: 1.5em; font-weight: 700; color: var(--beer-yellow2); margin-bottom: 8px; text-align: center; text-shadow: 0 2px 8px #ffde6940; }
+    .top-update { color: #e3c57a; font-size: 1em; margin-bottom: 18px; text-align: center; }
+    .top-table { width: 100%; border-collapse: collapse; margin: 0 auto 18px auto; table-layout: fixed; background: var(--beer-panel); border-radius: 13px; overflow: hidden; box-shadow: 0 1px 8px #0004; }
+    .top-table colgroup col:nth-child(1) { width: 25%; } .top-table colgroup col:nth-child(2) { width: 50%; } .top-table colgroup col:nth-child(3) { width: 25%; }
+    .top-table th { background: var(--beer-yellow); color: var(--beer-panel); font-weight: 700; padding: 12px 15px; text-align: center; border: none; font-size: 1.13em; }
+    .top-table td { padding: 12px 15px; text-align: center; border: none; background: var(--beer-cream2); color: var(--beer-panel); font-weight: 600; font-size: 1.09em; }
+    .timer-block { margin: 14px 0; font-size: 1.02em; color: #e3c57a; text-align: center; }
+    .timer { font-weight: bold; color: var(--beer-yellow); font-size: 1.08em; letter-spacing: 0.03em; }
+    .winners-block { margin-top: 14px; font-size: 1.06em; color: #e3c57a; text-align: center; padding: 12px 0 0 0; border-top: 1px solid #ffde6942; }
+    .winners-list { list-style: none; padding: 0; margin: 9px 0 0 0; color: var(--beer-yellow); font-size: 1.02em; }
+    .winners-list li { margin-bottom: 5px; color: var(--beer-cream2); }
+    .winners-week-title { color: var(--beer-yellow2); font-weight: 700; margin-top: 8px; margin-bottom: 3px; font-size: 1.07em; display: block; }
+    .footer-main { width: 100%; margin-top: 36px; background: linear-gradient(90deg, #38280f 40%, #523813 100%); border-radius: 18px 18px 0 0; box-shadow: 0 -1px 13px #000a; padding: 28px 0 20px 0; font-size: 1.13em; color: var(--beer-yellow2); display: flex; justify-content: center; font-weight: 700; border-top: 4px solid var(--beer-yellow2); letter-spacing: 0.01em; }
+    .footer-links a { color: var(--beer-yellow); text-decoration: none; margin: 0 8px; font-weight: 700; transition: color 0.13s; padding-bottom: 2px; border-bottom: 2px solid transparent; }
+    .footer-links a:hover { color: var(--beer-orange); border-bottom: 2px solid var(--beer-orange); }
   </style>
 </head>
 <body>
   <div class="main-wrapper">
-    <!-- Меню -->
     <nav class="menu-nav">
       <a href="/Beer-Syndicate/" class="menu-btn">Главная</a>
       <a href="/Beer-Syndicate/about" class="menu-btn">О гильдии</a>
@@ -240,101 +105,26 @@
       <a href="/Beer-Syndicate/recruit" class="menu-btn">Как вступить</a>
       <a href="/Beer-Syndicate/contacts" class="menu-btn">Контакты</a>
     </nav>
-    <!-- Блок топа -->
-   <div class="top-title">Топ-5 по вкладу за неделю</div>
-<div class="top-update">Последнее обновление: 21.07.25 13:50</div>
-<table class="top-table">
-  <colgroup>
-    <col>
-    <col>
-    <col>
-  </colgroup>
-  <tr>
-    <th>Место</th>
-    <th>Имя</th>
-    <th>Вклад (неделя)</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Контролёр</td>
-    <td>40</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Thxfordrugs</td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Uglyfronyongк</td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Кото</td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Пив</td>
-    <td>30</td>
-  </tr>
-</table>
-<div class="timer-block">
-  До сброса топа: <span class="timer">Загрузка...</span>
-</div>
-<div class="winners-block">
-  <span class="winners-week-title">Победители 1 недели:</span>
-  <ul class="winners-list">
-    <li>🥇 Нолемоций — 1017</li>
-    <li>🥈 СаняДробовик — 560</li>
-    <li>🥉 Thxfordrugs — 260</li>
-    <li>4 место: Пив — 191</li>
-    <li>5 место: Лолечка — 170</li>
-  </ul>
-  <span class="winners-week-title">Победители 2 недели:</span>
-  <ul class="winners-list">
-    <li>🥇 СаняДробовик — 1428</li>
-    <li>🥈 Thxfordrugs — 281</li>
-    <li>🥉 Пив — 172</li>
-    <li>4 место: Antilka — 140 <span style="color: #ff7f50;">(без выплаты)</span></li>
-    <li>5 место: Малахит — 130 <span style="color: #ff7f50;">(без выплаты)</span></li>
-  </ul>
-    <span class="winners-week-title">Победители 3 недели:</span>
-  <ul class="winners-list">
-    <li>🥇 Thxfordrugs — 260</li>
-    <li>🥈 Пив — 251</li>
-    <li>🥉 Санядробовик — 242</li>
-    <li>4 место: Фэнтоми — 201</li>
-    <li>5 место: Нолемоций — 200</li>
-  </ul>
-  <span class="winners-week-title">Победители 4 недели:</span>
-  <ul class="winners-list">
-    <li>Появятся здесь после окончания третьей недели</li>
-  </ul>
-</div>
-  <!-- Футер -->
-  <footer class="footer-main">
-    <div class="footer-content">
-      <span>© 2025 Beer-Syndicate</span>
-      <span class="footer-links">
-        <a href="/Beer-Syndicate/contacts">Контакты</a>
-        <span>|</span>
-        <a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a>
-        <span>|</span>
-        <a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a>
-      </span>
+    <div class="top-title">Топ-5 по вкладу за неделю</div>
+    <div class="top-update">Последнее обновление: 21.07.25 13:50</div>
+    <table class="top-table"><colgroup><col><col><col></colgroup><tr><th>Место</th><th>Имя</th><th>Вклад (неделя)</th></tr><tr><td>1</td><td>Контролёр</td><td>40</td></tr><tr><td>2</td><td>Thxfordrugs</td><td>30</td></tr><tr><td>3</td><td>Uglyfronyongк</td><td>30</td></tr><tr><td>4</td><td>Кото</td><td>30</td></tr><tr><td>5</td><td>Пив</td><td>30</td></tr></table>
+    <div class="timer-block">До сброса топа: <span class="timer">Загрузка...</span></div>
+    <div class="winners-block">
+      <span class="winners-week-title">Победители 1 недели:</span><ul class="winners-list"><li>🥇 Нолемоций — 1017</li><li>🥈 СаняДробовик — 560</li><li>🥉 Thxfordrugs — 260</li><li>4 место: Пив — 191</li><li>5 место: Лолечка — 170</li></ul>
+      <span class="winners-week-title">Победители 2 недели:</span><ul class="winners-list"><li>🥇 СаняДробовик — 1428</li><li>🥈 Thxfordrugs — 281</li><li>🥉 Пив — 172</li><li>4 место: Antilka — 140 <span style="color: #ff7f50;">(без выплаты)</span></li><li>5 место: Малахит — 130 <span style="color: #ff7f50;">(без выплаты)</span></li></ul>
+      <span class="winners-week-title">Победители 3 недели:</span><ul class="winners-list"><li>🥇 Thxfordrugs — 260</li><li>🥈 Пив — 251</li><li>🥉 Санядробовик — 242</li><li>4 место: Фэнтоми — 201</li><li>5 место: Нолемоций — 200</li></ul>
+      <span class="winners-week-title">Победители 4 недели:</span><ul class="winners-list"><li>Thxfordrugs — 500</li><li>Нолемоций — 500</li><li>Пив — 500</li><li>Контролёр — 500</li><li>Antrilka — 500</li><li>Киота — 500</li><li>Кото — 500</li><li>Пельменьчик — 500</li><li>Паф — 500</li></ul>
+      <span class="winners-week-title">Победители 5 недели:</span><ul class="winners-list"><li>Arthe — 333</li><li>Lynett — 333</li><li>Лалуминара — 333</li><li>Мицуки — 333</li><li>Marrakashka — 333</li><li>Нолемоций — 500</li><li>Thxfordrugs — 500</li><li>Uglyfromyoung — 333</li><li>Паф — 333</li><li>Пельменьчик — 333</li><li>Antrilka — 333</li><li>Кото — 333</li><li>Пив — 500</li><li>Аширо — 333</li></ul>
+      <span class="winners-week-title">Победители 6 недели:</span><ul class="winners-list">
     </div>
-  </footer>
-  <!-- Таймер -->
+  </div>
+  <footer class="footer-main"><div class="footer-content"><span>© 2025 Beer-Syndicate</span><span class="footer-links"><a href="/Beer-Syndicate/contacts">Контакты</a><span>|</span><a href="https://t.me/BeerSyndicate_aa" target="_blank">Telegram-канал</a><span>|</span><a href="https://discord.gg/wnCxVG2m" target="_blank">Discord</a></span></div></footer>
   <script>
   function updateTimer() {
     const now = new Date();
     const nextSunday = new Date();
-    // Вычисляем следующее воскресенье 23:59
     nextSunday.setDate(now.getDate() + ((7 - now.getDay()) % 7));
     nextSunday.setHours(23, 59, 0, 0);
-    // Если сегодня воскресенье и до 23:59
     if (now.getDay() === 0 && now.getHours() < 23) {
       nextSunday.setDate(now.getDate());
     }
@@ -343,8 +133,7 @@
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    document.querySelector('.timer').textContent =
-      `${days}д ${hours}ч ${minutes}м ${seconds}с`;
+    document.querySelector('.timer').textContent = `${days}д ${hours}ч ${minutes}м ${seconds}с`;
   }
   updateTimer();
   setInterval(updateTimer, 1000);
